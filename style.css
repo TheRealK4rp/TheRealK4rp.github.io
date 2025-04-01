@@ -16,7 +16,7 @@ body {
 
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
 }
 
 .calendar{
@@ -82,4 +82,47 @@ img{
     color: rgb(0, 0, 0);
     text-align: center;
     font-size: 100px;
+}
+
+.change{
+    position: relative;
+    top: 5px;
+    left: 1199px;
+    display: inline-block;
+    text-align: right;
+}
+
+.cButton{
+    font-size: 16px;
+    color: white;
+    background-color: #04AA6D;
+    padding: 20px;
+    border: none;
+}
+
+.buttonStuff{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
+}
+
+.buttonStuff a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.buttonStuff a:hover {
+    background-color: #ddd;
+}
+
+.change:hover .buttonStuff{
+    display: block;
+}
+
+.change:hover .cButton{
+    background-color: #3e8e41;
 }
