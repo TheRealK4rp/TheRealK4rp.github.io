@@ -22,7 +22,7 @@ h1{
 .calendar{
     display: grid;
     grid-template-columns: repeat(7, 190px);
-    grid-template-rows: repeat(7, 217px);
+    grid-template-rows: repeat(5, 217px);
 }
 
 .calendar div{
@@ -126,3 +126,4 @@ img{
 .change:hover .cButton{
     background-color: #3e8e41;
 }
+

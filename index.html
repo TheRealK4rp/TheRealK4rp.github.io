@@ -4,13 +4,38 @@
         <title>Test</title>
         <link rel ="stylesheet" href="/style.css">
     </head>
-    <body> 
+    <script>
+        var asa = ["sae.jpg",,"sae.jpg","sae.jpg","sae.jpg","sae.jpg","sae.jpg","sae.jpg","sae.jpg","sae.jpg",,,,]
+        var yoru = [,,,,,,]
+        function changeS(shift){
+            
+            if(shift == "asa"){
+                for(let i = 0;i < asa.length;i++){
+                    if(asa[i] == null){
+                        document.getElementById("temp" +i).src="null.png";
+                    }
+                    else
+                        document.getElementById("temp" +i).src=asa[i];
+                }
+            }
+            else{
+                for(let i = 0;i < yoru.length;i++){
+                    if(yoru[i] == null){
+                        document.getElementById("temp" +i).src="null.png";
+                    }
+                    else
+                        document.getElementById("temp" +i).src=yoru[i];
+                }
+            }
+        }
+    </script>
+    <body>
         <div class="change">
             <button class="cButton">
                 Change Shift
                 <div class ="buttonStuff">
-                    <a href="#">Asa</a>
-                    <a href="#">Yoru</a>
+                    <a href="#" onclick = "changeS('asa')">Asa</a>
+                    <a href="#" onclick = "changeS('yoru')">Yoru</a>
                 </div>
             </button>
         </div>
@@ -29,48 +54,246 @@
         </ul>
 
         <div class ="calendar">
-            <div></div>
-            <div>
-                1
-                
-                <img src="sae.jpg" width="85" height ="85">
-                <img src="sae.jpg" width="85" height ="85">
-                <img src="sae.jpg" width="85" height ="85">
-                <img src="sae.jpg" width="85" height ="85">
-             </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div>
-            <div>13</div>
-            <div>14</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-            <div>18</div>
-            <div>19</div>
-            <div>20</div>
-            <div>21</div>
-            <div>22</div>
-            <div>23</div>
-            <div>24</div>
-            <div>25</div>
-            <div>26</div>
-            <div>27</div>
-            <div>28</div>
-            <div>29</div>
-            <div>30</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div>
+                <img src="" id = "temp0" width="85" height ="85">
+                <img src="" id = "temp1" width="85" height ="85">
+                <img src="" id = "temp2" width="85" height ="85">
+                <img src="" id = "temp3" width="85" height ="85">
         </div>
+        <div>
+        1
+                <img src="" id = "temp4" width="85" height ="85">
+                <img src="" id = "temp5" width="85" height ="85">
+                <img src="" id = "temp6" width="85" height ="85">
+                <img src="" id = "temp7" width="85" height ="85">
+        </div>
+        <div>
+        2
+                <img src="" id = "temp8" width="85" height ="85">
+                <img src="" id = "temp9" width="85" height ="85">
+                <img src="" id = "temp10" width="85" height ="85">
+                <img src="" id = "temp11" width="85" height ="85">
+        </div>
+        <div>
+        3
+                <img src="" id = "temp12" width="85" height ="85">
+                <img src="" id = "temp13" width="85" height ="85">
+                <img src="" id = "temp14" width="85" height ="85">
+                <img src="" id = "temp15" width="85" height ="85">
+        </div>
+        <div>
+        4
+                <img src="" id = "temp16" width="85" height ="85">
+                <img src="" id = "temp17" width="85" height ="85">
+                <img src="" id = "temp18" width="85" height ="85">
+                <img src="" id = "temp19" width="85" height ="85">
+        </div>
+        <div>
+        5
+                <img src="" id = "temp20" width="85" height ="85">
+                <img src="" id = "temp21" width="85" height ="85">
+                <img src="" id = "temp22" width="85" height ="85">
+                <img src="" id = "temp23" width="85" height ="85">
+        </div>
+        <div>
+        6
+                <img src="" id = "temp24" width="85" height ="85">
+                <img src="" id = "temp25" width="85" height ="85">
+                <img src="" id = "temp26" width="85" height ="85">
+                <img src="" id = "temp27" width="85" height ="85">
+        </div>
+        <div>
+        7
+                <img src="" id = "temp28" width="85" height ="85">
+                <img src="" id = "temp29" width="85" height ="85">
+                <img src="" id = "temp30" width="85" height ="85">
+                <img src="" id = "temp31" width="85" height ="85">
+        </div>
+        <div>
+        8
+                <img src="" id = "temp32" width="85" height ="85">
+                <img src="" id = "temp33" width="85" height ="85">
+                <img src="" id = "temp34" width="85" height ="85">
+                <img src="" id = "temp35" width="85" height ="85">
+        </div>
+        <div>
+        9
+                <img src="" id = "temp36" width="85" height ="85">
+                <img src="" id = "temp37" width="85" height ="85">
+                <img src="" id = "temp38" width="85" height ="85">
+                <img src="" id = "temp39" width="85" height ="85">
+        </div>
+        <div>
+        10
+                <img src="" id = "temp40" width="85" height ="85">
+                <img src="" id = "temp41" width="85" height ="85">
+                <img src="" id = "temp42" width="85" height ="85">
+                <img src="" id = "temp43" width="85" height ="85">
+        </div>
+        <div>
+        11
+                <img src="" id = "temp44" width="85" height ="85">
+                <img src="" id = "temp45" width="85" height ="85">
+                <img src="" id = "temp46" width="85" height ="85">
+                <img src="" id = "temp47" width="85" height ="85">
+        </div>
+        <div>
+        12
+                <img src="" id = "temp48" width="85" height ="85">
+                <img src="" id = "temp49" width="85" height ="85">
+                <img src="" id = "temp50" width="85" height ="85">
+                <img src="" id = "temp51" width="85" height ="85">
+        </div>
+        <div>
+        13
+                <img src="" id = "temp52" width="85" height ="85">
+                <img src="" id = "temp53" width="85" height ="85">
+                <img src="" id = "temp54" width="85" height ="85">
+                <img src="" id = "temp55" width="85" height ="85">
+        </div>
+        <div>
+        14
+                <img src="" id = "temp56" width="85" height ="85">
+                <img src="" id = "temp57" width="85" height ="85">
+                <img src="" id = "temp58" width="85" height ="85">
+                <img src="" id = "temp59" width="85" height ="85">
+        </div>
+        <div>
+        15
+                <img src="" id = "temp60" width="85" height ="85">
+                <img src="" id = "temp61" width="85" height ="85">
+                <img src="" id = "temp62" width="85" height ="85">
+                <img src="" id = "temp63" width="85" height ="85">
+        </div>
+        <div>
+        16
+                <img src="" id = "temp64" width="85" height ="85">
+                <img src="" id = "temp65" width="85" height ="85">
+                <img src="" id = "temp66" width="85" height ="85">
+                <img src="" id = "temp67" width="85" height ="85">
+        </div>
+        <div>
+        17
+                <img src="" id = "temp68" width="85" height ="85">
+                <img src="" id = "temp69" width="85" height ="85">
+                <img src="" id = "temp70" width="85" height ="85">
+                <img src="" id = "temp71" width="85" height ="85">
+        </div>
+        <div>
+        18
+                <img src="" id = "temp72" width="85" height ="85">
+                <img src="" id = "temp73" width="85" height ="85">
+                <img src="" id = "temp74" width="85" height ="85">
+                <img src="" id = "temp75" width="85" height ="85">
+        </div>
+        <div>
+        19
+                <img src="" id = "temp76" width="85" height ="85">
+                <img src="" id = "temp77" width="85" height ="85">
+                <img src="" id = "temp78" width="85" height ="85">
+                <img src="" id = "temp79" width="85" height ="85">
+        </div>
+        <div>
+        20
+                <img src="" id = "temp80" width="85" height ="85">
+                <img src="" id = "temp81" width="85" height ="85">
+                <img src="" id = "temp82" width="85" height ="85">
+                <img src="" id = "temp83" width="85" height ="85">
+        </div>
+        <div>
+        21
+                <img src="" id = "temp84" width="85" height ="85">
+                <img src="" id = "temp85" width="85" height ="85">
+                <img src="" id = "temp86" width="85" height ="85">
+                <img src="" id = "temp87" width="85" height ="85">
+        </div>
+        <div>
+        22
+                <img src="" id = "temp88" width="85" height ="85">
+                <img src="" id = "temp89" width="85" height ="85">
+                <img src="" id = "temp90" width="85" height ="85">
+                <img src="" id = "temp91" width="85" height ="85">
+        </div>
+        <div>
+        23
+                <img src="" id = "temp92" width="85" height ="85">
+                <img src="" id = "temp93" width="85" height ="85">
+                <img src="" id = "temp94" width="85" height ="85">
+                <img src="" id = "temp95" width="85" height ="85">
+        </div>
+        <div>
+        24
+                <img src="" id = "temp96" width="85" height ="85">
+                <img src="" id = "temp97" width="85" height ="85">
+                <img src="" id = "temp98" width="85" height ="85">
+                <img src="" id = "temp99" width="85" height ="85">
+        </div>
+        <div>
+        25
+                <img src="" id = "temp100" width="85" height ="85">
+                <img src="" id = "temp101" width="85" height ="85">
+                <img src="" id = "temp102" width="85" height ="85">
+                <img src="" id = "temp103" width="85" height ="85">
+        </div>
+        <div>
+        26
+                <img src="" id = "temp104" width="85" height ="85">
+                <img src="" id = "temp105" width="85" height ="85">
+                <img src="" id = "temp106" width="85" height ="85">
+                <img src="" id = "temp107" width="85" height ="85">
+        </div>
+        <div>
+        27
+                <img src="" id = "temp108" width="85" height ="85">
+                <img src="" id = "temp109" width="85" height ="85">
+                <img src="" id = "temp110" width="85" height ="85">
+                <img src="" id = "temp111" width="85" height ="85">
+        </div>
+        <div>
+        28
+                <img src="" id = "temp112" width="85" height ="85">
+                <img src="" id = "temp113" width="85" height ="85">
+                <img src="" id = "temp114" width="85" height ="85">
+                <img src="" id = "temp115" width="85" height ="85">
+        </div>
+        <div>
+        29
+                <img src="" id = "temp116" width="85" height ="85">
+                <img src="" id = "temp117" width="85" height ="85">
+                <img src="" id = "temp118" width="85" height ="85">
+                <img src="" id = "temp119" width="85" height ="85">
+        </div>
+        <div>
+        30
+                <img src="" id = "temp120" width="85" height ="85">
+                <img src="" id = "temp121" width="85" height ="85">
+                <img src="" id = "temp122" width="85" height ="85">
+                <img src="" id = "temp123" width="85" height ="85">
+        </div>
+        <div>
+                <img src="" id = "temp124" width="85" height ="85">
+                <img src="" id = "temp125" width="85" height ="85">
+                <img src="" id = "temp126" width="85" height ="85">
+                <img src="" id = "temp127" width="85" height ="85">
+        </div>
+        <div>
+                <img src="" id = "temp128" width="85" height ="85">
+                <img src="" id = "temp129" width="85" height ="85">
+                <img src="" id = "temp130" width="85" height ="85">
+                <img src="" id = "temp131" width="85" height ="85">
+        </div>
+        <div>
+                <img src="" id = "temp132" width="85" height ="85">
+                <img src="" id = "temp133" width="85" height ="85">
+                <img src="" id = "temp134" width="85" height ="85">
+                <img src="" id = "temp135" width="85" height ="85">
+        </div>
+        <div>
+                <img src="" id = "temp136" width="85" height ="85">
+                <img src="" id = "temp137" width="85" height ="85">
+                <img src="" id = "temp138" width="85" height ="85">
+                <img src="" id = "temp139" width="85" height ="85">
+        </div>
+
     </body>
 </html>
