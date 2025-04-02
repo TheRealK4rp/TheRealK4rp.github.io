@@ -12,6 +12,7 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+    background-color: red;
 }
 
 h1{
@@ -26,7 +27,7 @@ h1{
 }
 
 .calendar div{
-    background-color: #f1f1f1;
+    background-color: #ca0202;
     border: 1px solid black;
     padding: 3px;
     font-size: 30px;
