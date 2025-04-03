@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         //printHTML();
-        //printAsa();
-        printYoru();
+        printAsa();
+        //printYoru();
     }
 
     public static void printHTML(){
@@ -57,7 +57,7 @@ public class Main{
                     line = ",,,,";
                 }
                 else if(line.equals("")){
-                    if((i+3)%7 == 0 || (i+2)%7 == 0)
+                    if((i+3)%7 == 0 || (i+2)%7 == 0 || (i+4) % 7 == 0)
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -70,7 +70,7 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
-                            if(!((i+3)%7 == 0 || (i+2)%7 == 0)){ 
+                            if(!((i+3)%7 == 0 || (i+2)%7 == 0 || (i+4) % 7 == 0)){ 
                                 d--;
                                 f=true;
                             }
