@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
+        //printHTML();
+        //printAsa();
         printYoru();
     }
 
@@ -15,7 +17,7 @@ public class Main{
                     day++;
                 }
             }
-            System.out.println("\t<img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\">");
+            System.out.println("\t<div><span id = temp"+i+ "-1></span><img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\"></div>");
         }
     }
 
@@ -26,10 +28,11 @@ public class Main{
             Scanner s = new Scanner(in);
             for(int i = 0;i<30;i++){
                 String line = s.nextLine().toLowerCase();
-                if(line.equals("")) line = ",,";
+                if((i+1) % 7 == 0 || i == 1) line = ",,";
+                else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
-                    if(a<0) line = "\""+line + ".jpg\",,";
+                    if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
                     else line = "\"" + line.substring(0,a) + ".jpg\",\"" + line.substring(a+1)+".jpg\",";
                 }
                 System.out.print(","+line+",");
@@ -48,17 +51,34 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             for(int i = 0;i<30;i++){
+                
                 String line = s.nextLine().toLowerCase();
-                if(line.equals("")) line = ",,,,";
+                if ((i+1)%7==0 || i == 1) {
+                    line = ",,,,";
+                }
+                else if(line.equals("")){
+                    if((i+3)%7 == 0 || (i+2)%7 == 0)
+                        line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
+                    else    
+                        line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
+                }
                 else{
                     line = "\"" + line;
                     for(int b = 0; b<4;b++){
                         int a = line.indexOf(" ");
                         if(a < 0){
                             line+=".jpg\"";
-                            for(int c = 0; c < 4-b; c++){
-                                line+=",";
+                            int d = 4-b-1;
+                            boolean f = false;
+                            if(!((i+3)%7 == 0 || (i+2)%7 == 0)){ 
+                                d--;
+                                f=true;
                             }
+                            for(int c = 0; c < d; c++){
+                                line+=",\"null2.png\"";
+                            }
+                            
+                            line+=(f)?",,":",";
                             break;
                         }
                         line = line.substring(0,a)+".jpg\",\""+line.substring(a+1);
