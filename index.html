@@ -21,11 +21,11 @@
                         document.getElementById("temp" +i).src=asa[i];
                         if(asa[i] != "null2.png"){
                             var t = asa[i].charAt(0);
-                            t = t.toUpperCase();
-                            document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ asa[i].substring(1,asa[i].indexOf("."));
+                            t = t.toUpperCase()
+                            document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ asa[i].substring(1,asa[i].indexOf("."))
                         }
                         else{
-                            document.getElementById("temp"+i+"-1").innerHTML = "Maid ???";
+                            document.getElementById("temp"+i+"-1").innerHTML = "Maid ???"
                         }
                     }
                 }
@@ -55,14 +55,17 @@
         }
     </script>
     <body onload = "changeS('asa')" background="bkg.png">
+        <video autoplay muted loop id="vid">
+            <source src ="genji_lowres.mp4" type="video/mp4">
+        </video>
         <h1>NOT Asayoru Schedule</h1>
         <ul class = "month">
             <div class="change">
                 <button class="cButton">
                     Change Shift
                     <div class ="buttonStuff">
-                        <a href="#" onclick = "changeS('asa')">Asa</a>
-                        <a href="#" onclick = "changeS('yoru')">Yoru</a>
+                        <a href="#" onclick = "changeS('asa')">Asa☀️</a>
+                        <a href="#" onclick = "changeS('yoru')">Yoru🌙</a>
                     </div>
                 </button>
             </div>
