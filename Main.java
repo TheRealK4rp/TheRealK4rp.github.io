@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
-        //printHTML();
-        printAsa();
+        printHTML();
+        //printAsa();
         //printYoru();
     }
 
@@ -17,7 +17,7 @@ public class Main{
                     day++;
                 }
             }
-            System.out.println("\t<div><span id = temp"+i+ "-1></span><img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\"></div>");
+            System.out.println("\t<div id = temp"+i+"-2 style=\"cursor: pointer;\"><span id = temp"+i+ "-1></span><img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\"></div>");
         }
     }
 
