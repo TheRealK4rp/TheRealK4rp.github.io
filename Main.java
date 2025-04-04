@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
-        printHTML();
+        //printHTML();
         //printAsa();
-        //printYoru();
+        printYoru();
     }
 
     public static void printHTML(){
