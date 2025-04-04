@@ -10,6 +10,28 @@
         var insta =["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadollyy","maidjia","latte_maid","maid.mahou","wan.wan.mari","maid.melly","maid_mitsu","moemoe.moon","nicotheunbridled","maid_niya","maidnyan","maid.poyo","otohimehaato","ririmaid","bytesizeangel","dfmsae","maid_saiki","sakurin_maid","moomookyun","maid_sumi","toki.etc_","yuna.maid"]
         const instaL = new Map([['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
         function changeS(shift){
+            if(shift == 'sae'){
+                for(let i = 4; i <asa.length;i++){
+                        document.getElementById("temp" +i).src="sae.jpg";
+                        document.getElementById("temp"+i+"-1").style.display = "inherit";
+                        document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
+                        document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/dfmsae/','mywindow');}
+                        document.getElementById("temp"+i+"-1").innerHTML = "Maid 🍤🍤🍤🍤"
+
+                }
+                return;
+            }
+            if(shift == 'mitsu'){
+                for(let i = 4; i <asa.length;i++){
+                        document.getElementById("temp" +i).src="seal.png";
+                        document.getElementById("temp"+i+"-1").style.display = "inherit";
+                        document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
+                        document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/maid_mitsu','mywindow');}
+                        document.getElementById("temp"+i+"-1").innerHTML = "Maid 🦭"
+
+                }
+                return;
+            }
             if(shift == "asa"){
                 //onclick="window.open('https:/\/www.instagram.com/dfmsae/','mywindow');" style="cursor: pointer;"
                 for(let i = 0;i < asa.length;i++){
@@ -88,6 +110,8 @@
                     <div class ="buttonStuff">
                         <a href="#" onclick = "changeS('asa')">Asa☀️</a>
                         <a href="#" onclick = "changeS('yoru')">Yoru🌙</a>
+                        <a href="#" onclick = "changeS('sae')">Sae🍤</a>
+                        <a href="#" onclick = "changeS('mitsu')">Mitsu🦭</a>
                     </div>
                 </button>
             </div>
