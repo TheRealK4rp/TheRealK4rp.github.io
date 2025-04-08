@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         //printHTML();
-        printAsa();
-        //printYoru();
+        //printAsa();
+        printYoru();
+        //printEvent();
     }
 
     public static void printHTML(){
@@ -19,6 +20,15 @@ public class Main{
             }
             System.out.println("\t<div id = temp"+i+"-2 style=\"cursor: pointer;\"><span id = temp"+i+ "-1></span><img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\"></div>");
         }
+    }
+
+    public static void printEvent(){
+        System.out.println("<div>");
+        for(int i = 0;i < 10;i++){
+            System.out.println("\t<div id = event"+i+"-2 display = \"hidden\" style=\"cursor: pointer;\"><span id = event"+i+ "-1></span><img src=\"\" id = \"event" +i+"\" width=\"38\" height =\"38\"></div>");
+        }
+        System.out.println("</div>");
+
     }
 
     public static void printAsa(){

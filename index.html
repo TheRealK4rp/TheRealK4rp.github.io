@@ -6,9 +6,10 @@
     </head>
     <script>
         var asa = [,,,,,"moon.jpg","sumi.jpg",,,,,,,"toki.jpg","nyan.jpg",,,"mitsu.jpg","aki.jpg",,,"riri.jpg","soul.jpg",,,"moon.jpg","dolly.jpg",,,,,,,"poyo.jpg","sakurin.jpg",,,"toki.jpg","rose.jpg",,,"sumi.jpg","null2.png",,,"mitsu.jpg","null2.png",,,"mitsu.jpg","null2.png",,,"null2.png","null2.png",,,,,,,"moon.jpg","reyna.jpg",,,"null2.png","null2.png",,,"aoi.jpg","dolly.jpg",,,"mari.jpg","null2.png",,,"latte.jpg","riri.jpg",,,"saiki.jpg","null2.png",,,,,,,"toki.jpg","null2.png",,,"poyo.jpg","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,"null2.png","null2.png",,,"null2.png","null2.png",,,,];
-        var yoru = [,,,,"nico.jpg","ai.jpg","dolly.jpg",,,,,,"rose.jpg","dolly.jpg","sakurin.jpg",,"moon.jpg","latte.jpg","sae.jpg","dolly.jpg","saiki.jpg","poyo.jpg","mitsu.jpg","sumi.jpg","nyan.jpg","riri.jpg","rose.jpg","soul.jpg",,,,,"nico.jpg","sumi.jpg","null2.png",,"sae.jpg","yuna.jpg","null2.png",,"toki.jpg","aoi.jpg","dolly.jpg",,"poyo.jpg","null2.png","null2.png","null2.png","saiki.jpg","nico.jpg","riri.jpg","sumi.jpg","moon.jpg","nyan.jpg","saiki.jpg","null2.png",,,,,"reyna.jpg","dolly.jpg","null2.png",,"sae.jpg","soul.jpg","null2.png",,"latte.jpg","nico.jpg","null2.png",,"null2.png","null2.png","null2.png","null2.png","mari.jpg","riri.jpg","sumi.jpg","null2.png","nyan.jpg","nico.jpg","mitsu.jpg","soul.jpg",,,,,"null2.png","null2.png","null2.png",,"rose.jpg","sae.jpg","yuna.jpg",,"null2.png","null2.png","null2.png",,"null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"null2.png","null2.png","null2.png",,"null2.png","null2.png","null2.png",,,,,,,,,,,,,,,,,,,,,,,,,,,,,];
+        var yoru = [,,,,"nico.jpg","ai.jpg","dolly.jpg",,,,,,"rose.jpg","dolly.jpg","sakurin.jpg",,"moon.jpg","latte.jpg","sae.jpg","dolly.jpg","saiki.jpg","poyo.jpg","mitsu.jpg","sumi.jpg","nyan.jpg","riri.jpg","rose.jpg","soul.jpg",,,,,"nico.jpg","sumi.jpg","null2.png",,"sae.jpg","yuna.jpg","null2.png",,"toki.jpg","aoi.jpg","dolly.jpg",,"poyo.jpg","ai.jpg","sakurin.jpg","aki.jpg","saiki.jpg","nico.jpg","riri.jpg","sumi.jpg","moon.jpg","nyan.jpg","saiki.jpg","null2.png",,,,,"reyna.jpg","dolly.jpg","null2.png",,"sae.jpg","soul.jpg","null2.png",,"latte.jpg","nico.jpg","null2.png",,"null2.png","null2.png","null2.png","null2.png","mari.jpg","riri.jpg","sumi.jpg","null2.png","nyan.jpg","nico.jpg","mitsu.jpg","soul.jpg",,,,,"null2.png","null2.png","null2.png",,"rose.jpg","sae.jpg","yuna.jpg",,"null2.png","null2.png","null2.png",,"null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"null2.png","null2.png","null2.png",,"null2.png","null2.png","null2.png",,,,,,,,,,,,,,,,,,,,,,,,,,,,,];
         var insta =["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadollyy","maidjia","latte_maid","maid.mahou","wan.wan.mari","maid.melly","maid_mitsu","moemoe.moon","nicotheunbridled","maid_niya","maidnyan","maid.poyo","otohimehaato","ririmaid","bytesizeangel","dfmsae","maid_saiki","sakurin_maid","moomookyun","maid_sumi","toki.etc_","yuna.maid"]
         const instaL = new Map([['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
+        const event1 = ["sae.jpg","latte.jpg","nyan.jpg","null2.png","null2.png","null2.png","moon.jpg","null2.png","null2.png","null2.png"]
         function changeS(shift){
             if(shift == 'sae'){
                 for(let i = 4; i <asa.length;i++){
@@ -17,8 +18,11 @@
                         document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
                         document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/dfmsae/','mywindow');}
                         document.getElementById("temp"+i+"-1").innerHTML = "Maid 🍤🍤🍤🍤"
+                        document.getElementById("temp"+i+"-2").style.visibility = "visible"
+
 
                 }
+                
                 return;
             }
             if(shift == 'mitsu'){
@@ -28,6 +32,8 @@
                         document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
                         document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/maid_mitsu','mywindow');}
                         document.getElementById("temp"+i+"-1").innerHTML = "Maid 🦭"
+                        document.getElementById("temp"+i+"-2").style.visibility = "visible"
+
 
                 }
                 return;
@@ -36,6 +42,7 @@
                 //onclick="window.open('https:/\/www.instagram.com/dfmsae/','mywindow');" style="cursor: pointer;"
                 for(let i = 0;i < asa.length;i++){
                     if(i<4) continue;
+                    document.getElementById("temp"+i+"-2").style.visibility = "visible"
                     if(asa[i] == null){
                         document.getElementById("temp" +i).src="null.png";
                         //document.getElementById("temp"+i).style.visibility = "hidden";
@@ -67,7 +74,46 @@
             else{
                 for(let i = 0;i < yoru.length;i++){
                     if(i<4) continue;
-                    if(yoru[i] == null){
+                    document.getElementById("temp"+i+"-2").style.visibility = "visible"
+                    if(i >= 72 && i <= 75){
+
+                        var content = document.getElementById("temp" +i+'-2')
+                        var parent = content.parentNode;
+                        parent.append(content,parent.firstChild)
+                        
+
+                        document.getElementById("temp" +i).src="null.png";
+                        document.getElementById("temp"+i+"-1").innerHTML = "";
+                        document.getElementById("temp"+i+"-1").style.display = "none";
+                        document.getElementById("temp" + i+"-2").onclick = "";
+                        document.getElementById("temp" + i+"-2").style = ""
+                        document.getElementById("temp"+i+"-2").style.visibility = "hidden"
+
+                        document.getElementById("temp" + i).style.width = '30px'
+                        document.getElementById("temp"+i).style.height = '30px'
+                        if(i == 75){
+                                for(let a = 0; a < 10; a++){
+                                        document.getElementById("event"+a+"-2").style.visibility = "visible"
+                                        document.getElementById("event" + a+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(event1[i].substring(0,event1[i].indexOf("."))),'mywindow');}
+                                        document.getElementById("event" + a+"-2").style = 'cursor:pointer;'
+                                        
+                                        document.getElementById("event"+a+"-1").style.display = "inherit";
+                                        document.getElementById("event" +a).src=event1[a];
+                                        if(event1[a] != "null2.png"){
+                                                var t = event1[a].charAt(0);
+                                                t = t.toUpperCase();
+                                                document.getElementById("event"+a+"-1").innerHTML = "Maid " +t+ event1[a].substring(1,event1[a].indexOf("."));
+                                        }
+                                        else{
+                                                document.getElementById("event"+a+"-1").innerHTML = "Maid ???";
+                                                document.getElementById("event" +a+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
+
+                                        }
+                                }
+                                //reformat();
+                        }
+                    }
+                    else if(yoru[i] == null){
                         document.getElementById("temp" +i).src="null.png";
                         document.getElementById("temp"+i+"-1").innerHTML = "";
                         document.getElementById("temp"+i+"-1").style.display = "none";
@@ -95,6 +141,25 @@
                     }
                 }
             }
+        }
+
+        function reformat(){
+                for(let i = 0;i<10;i++){
+                        var content = document.getElementById("event" +i+'-2')
+                        var parent = content.parentNode;
+                        parent.append(content,parent.firstChild)
+                }
+                var content = document.getElementById("temp72-2")
+                var parent = content.parentNode;
+                for(let i = 73; i <=75;i++){
+                        if(i == 75){
+                                parent = content.parentNode
+                        }
+                        content = document.getElementById("temp" +i+'-2')
+                        if(i == 75) continue;
+                        parent.append(content,parent.firstChild)  
+                }
+                
         }
     </script>
     <body onload = "changeS('asa')" background="bkg.png">
@@ -254,12 +319,23 @@
                         <div id = temp70-2><span id = temp70-1></span><img src="" id = "temp70" width="85" height ="85"></div>
                         <div id = temp71-2><span id = temp71-1></span><img src="" id = "temp71" width="85" height ="85"></div>
                 </div>
-                <div>
+                <div class = special>
                 18
                         <div id = temp72-2><span id = temp72-1></span><img src="" id = "temp72" width="85" height ="85"></div>
                         <div id = temp73-2><span id = temp73-1></span><img src="" id = "temp73" width="85" height ="85"></div>
                         <div id = temp74-2><span id = temp74-1></span><img src="" id = "temp74" width="85" height ="85"></div>
                         <div id = temp75-2><span id = temp75-1></span><img src="" id = "temp75" width="85" height ="85"></div>
+                        <div id = event0-2 display = "hidden" style="cursor: pointer;"><span id = event0-1></span><img src="" id = "event0" width="38" height ="38"></div>
+                        <div id = event1-2 display = "hidden" style="cursor: pointer;"><span id = event1-1></span><img src="" id = "event1" width="38" height ="38"></div>
+                        <div id = event2-2 display = "hidden" style="cursor: pointer;"><span id = event2-1></span><img src="" id = "event2" width="38" height ="38"></div>
+                        <div id = event3-2 display = "hidden" style="cursor: pointer;"><span id = event3-1></span><img src="" id = "event3" width="38" height ="38"></div>
+                        <div id = event4-2 display = "hidden" style="cursor: pointer;"><span id = event4-1></span><img src="" id = "event4" width="38" height ="38"></div>
+                        <div id = event5-2 display = "hidden" style="cursor: pointer;"><span id = event5-1></span><img src="" id = "event5" width="38" height ="38"></div>
+                        <div id = event6-2 display = "hidden" style="cursor: pointer;"><span id = event6-1></span><img src="" id = "event6" width="38" height ="38"></div>
+                        <div id = event7-2 display = "hidden" style="cursor: pointer;"><span id = event7-1></span><img src="" id = "event7" width="38" height ="38"></div>
+                        <div id = event8-2 display = "hidden" style="cursor: pointer;"><span id = event8-1></span><img src="" id = "event8" width="38" height ="38"></div>
+                        <div id = event9-2 display = "hidden" style="cursor: pointer;"><span id = event9-1></span><img src="" id = "event9" width="38" height ="38"></div>
+                        
                 </div>
                 <div>
                 19
