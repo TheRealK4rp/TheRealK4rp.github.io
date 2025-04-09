@@ -54,6 +54,7 @@ span{
 }
 
 .calendar > div{
+    position: relative;
     background-color: #c0c0c0;
     border: 1px solid black;
     padding: 3px;
@@ -62,8 +63,10 @@ span{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex-basis: fit-content;
     column-gap: 10px;
     margin: 1px;
+    order: 1;
     /* 
     position: relative;
     z-index: 1;
@@ -73,6 +76,9 @@ span{
     grid-template-rows: 90px 90px;*/
 }
 
+.special{
+    order: 0;
+}
 
 .calendar div div:hover span{ 
     visibility: visible;
