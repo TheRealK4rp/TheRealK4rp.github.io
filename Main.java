@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         //printHTML();
-        printAsa();
-        //printYoru();
+        //printAsa();
+        printYoru();
         //printEvent();
     }
 
