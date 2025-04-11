@@ -12,10 +12,12 @@ function daynight(array,ti,maid){
                 if(ti == 1){
                         addImgAndName("temp"+(i+2),"asa.png","other/")
                         document.getElementById("temp"+(i+2)+"-1").innerHTML = "Asa"
+                        document.getElementById("temp"+(i+2)+"-2").onclick = function() {changeS('asa')}
                 }
                 else{
                         addImgAndName("temp"+(i+3),"yoru.png","other/")
                         document.getElementById("temp"+(i+3)+"-1").innerHTML = "Yoru"
+                        document.getElementById("temp"+(i+3)+"-2").onclick = function() {changeS('yoru')}
                 }
                 
 
