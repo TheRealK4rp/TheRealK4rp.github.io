@@ -4,8 +4,8 @@ public class Main{
 
     public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
-        //printHTML();
-        printAsa();
+        printHTML();
+        //printAsa();
         //printYoru();
         //printEvent();
         //printMaidButton();
@@ -21,22 +21,24 @@ public class Main{
         int day = 1;
         for(int i = 0; i<140;i++){
             if(i%4==0){
-                System.out.println("</div>\n<div>");
+                if(day == 18){ System.out.println("</div>\n<div id = 'special'>");}
+                else System.out.println("</div>\n<div>");
                 if(i/4 >=1 && day <=30){
                     System.out.println(day);
                     day++;
                 }
             }
-            System.out.println("\t<div id = temp"+i+"-2 style=\"cursor: pointer;\"><span id = temp"+i+ "-1></span><img src=\"\" id = \"temp" +i+"\" width=\"85\" height =\"85\"></div>");
+            System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
+            if(i==75){
+                printEvent();
+            }
         }
     }
 
     public static void printEvent(){
-        System.out.println("<div>");
-        for(int i = 0;i < 10;i++){
-            System.out.println("\t<div id = event"+i+"-2 display = \"hidden\" style=\"cursor: pointer;\"><span id = event"+i+ "-1></span><img src=\"\" id = \"event" +i+"\" width=\"50\" height =\"50\"></div>");
+        for(int i = 0;i < 11;i++){
+            System.out.println("\t<div id = event"+i+"-2 class = 'eventnum1'><span id = event"+i+ "-1></span><img id = \"event" +i+"\"></div>");
         }
-        System.out.println("</div>");
 
     }
 

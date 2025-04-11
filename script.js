@@ -3,7 +3,7 @@ var yoru = [,,,,"nico.jpg","ai.jpg","dolly.jpg",,,,,,"rose.jpg","dolly.jpg","sak
 var insta =["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadollyy","maidjia","latte_maid","maid.mahou","wan.wan.mari","maid.melly","maid_mitsu","moemoe.moon","nicotheunbridled","maid_niya","maidnyan","maid.poyo","otohimehaato","ririmaid","bytesizeangel","dfmsae","maid_saiki","sakurin_maid","moomookyun","maid_sumi","toki.etc_","yuna.maid"]
 const instaL = new Map([['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
 const event1 = ["sae.jpg","latte.jpg","nyan.jpg","ai.jpg","aki.jpg","reyna.jpg","moon.jpg","rose.jpg","null2.png","null2.png","bny.png"]
-var time;
+
 function daynight(array,ti,maid){
         for(let a = 0; a<array.length; a++){
                 var i = (Math.floor(array[a]/4)*4);
@@ -18,7 +18,6 @@ function daynight(array,ti,maid){
                 
 
         }
-        //if(ti == 0) changeFormat();
         
 }
 
@@ -26,8 +25,7 @@ function onlyMember(maid){
         var index = []
         changeS('asa');
         for(let i = 4; i < 124; i++){
-                document.getElementById("temp"+i+"-2").style.visibility = "hidden"
-                document.getElementById("temp"+i).style.visibility = "hidden"
+                hide("temp"+i)
         }
 
         for(let i = 4; i<asa.length;i++){
@@ -43,8 +41,7 @@ function onlyMember(maid){
                 }
         }
         for(let a = 0; a < 11; a++){
-            document.getElementById("event"+a+"-2").style.visibility = "hidden"
-            document.getElementById("event"+a).style.visibility = "hidden"
+            hide("event"+a);
             if(event1[a] == (maid +".jpg")) {
                 index.push(72)
             }
@@ -67,7 +64,6 @@ function changeS(shift){
         }
 
         if(shift == "asa"){
-                time = shift;
                 for(let i = 4;i < 124;i++){
 
                         if(asa[i] == null){
@@ -79,12 +75,11 @@ function changeS(shift){
                 }
         }
         else{
-                time = shift;
                 for(let i = 4;i < 124;i++){
                         if(i >= 72 && i <= 75){
 
                                 makeNULL(i);
-                                
+
                                 if(i == 75){
                                         for(let a = 0; a < 11; a++){
                                                 addImgAndName("event"+a,event1[a],"maids/")
@@ -101,6 +96,10 @@ function changeS(shift){
                         }
                 }
         }
+}
+function hide(id){
+        document.getElementById(id+"-2").style.visibility = "hidden"
+        document.getElementById(id).style.visibility = "hidden"
 }
 function forFun(img,name){
         for(let i = 4; i <124;i++){

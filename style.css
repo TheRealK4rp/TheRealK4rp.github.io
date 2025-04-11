@@ -80,11 +80,23 @@ span{
     order: 0;
 }
 
+
 .calendar div div:hover span{ 
     visibility: visible;
 }
 
- 
+.calendar img{
+    width: 85px;
+    height: 85px;
+}
+.eventnum1{
+    display: hidden;
+}
+
+.eventnum1 img{
+    width: 50px !important;
+    height: 50px !important;
+}
 
 .calender div li{
     display: inline-block;
