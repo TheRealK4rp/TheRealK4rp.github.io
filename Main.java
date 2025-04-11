@@ -1,11 +1,20 @@
 import java.io.*;
 import java.util.Scanner;
 public class Main{
+
+    public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
         //printHTML();
-        printAsa();
+        //printAsa();
         //printYoru();
         //printEvent();
+        printMaidButton();
+    }
+
+    public static void printMaidButton(){
+        for(int i = 0;i<maids.length;i++){
+            System.out.println("<a onclick = \"onlyMember('"+ maids[i] +"')\">"+Character.toUpperCase(maids[i].charAt(0))+maids[i].substring(1)+"</a>");
+        }
     }
 
     public static void printHTML(){
