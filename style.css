@@ -150,7 +150,7 @@ img{
 .specific{
     position: relative;
     top: 100%;
-    left: 23%;
+    left: 20%;
     display: inline-block;
     text-align: right;
 }
@@ -169,6 +169,8 @@ img{
     position: absolute;
     background-color: #e5e4e4;
     z-index: 1;
+    top: 60px;
+    right: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
 }
 
@@ -176,6 +178,11 @@ img{
     display: none;
     background-color: antiquewhite;
     position: absolute;
+    right: 10px;
+    top: 60px;
+    overflow-y: auto;
+    height: 200px;
+    transition: top 0.3s;
     z-index: 2;
     text-align: center;
 }
