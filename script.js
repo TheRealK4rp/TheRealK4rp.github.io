@@ -7,38 +7,24 @@ var time;
 function daynight(array,ti,maid){
         for(let a = 0; a<array.length; a++){
                 var i = (Math.floor(array[a]/4)*4);
-                var m = "maids/" + maid + ".jpg";
-                document.getElementById("temp"+i+"-2").style.visibility = "visible"
-                document.getElementById("temp"+i).style.visibility = "visible"
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get((m).substring(0,(m).indexOf("."))),'mywindow');}
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" +i).src=m;
-                var t = (m).charAt(0);
-                t = t.toUpperCase()
-                document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ (m).substring(1,(m).indexOf("."))
+                addImgAndName("temp"+i,maid+".jpg","maids/")
 
                 if(ti == 1){
-                        document.getElementById("temp"+(i+2)+"-2").style.visibility = "visible"
-                        document.getElementById("temp"+(i+2)).style.visibility = "visible"
-                        document.getElementById("temp"+(i+2)+"-1").style.display = "inherit";
-                        document.getElementById("temp" +(i+2)).src="other/asa.png";
+                        addImgAndName("temp"+(i+2),"asa.png","other/")
                 }
                 else{
-                        document.getElementById("temp"+(i+3)+"-2").style.visibility = "visible"
-                        document.getElementById("temp"+(i+3)).style.visibility = "visible"
-                        document.getElementById("temp"+(i+3)+"-1").style.display = "inherit";
-                        document.getElementById("temp" +(i+3)).src="other/yoru.png";
+                        addImgAndName("temp"+(i+3),"yoru.png","other/")
                 }
                 
 
         }
+        //if(ti == 0) changeFormat();
         
 }
 
 function onlyMember(maid){
         var index = []
+        changeS('asa');
         for(let i = 4; i < 124; i++){
                 document.getElementById("temp"+i+"-2").style.visibility = "hidden"
                 document.getElementById("temp"+i).style.visibility = "hidden"
@@ -58,250 +44,96 @@ function onlyMember(maid){
         }
         for(let a = 0; a < 11; a++){
             document.getElementById("event"+a+"-2").style.visibility = "hidden"
+            document.getElementById("event"+a).style.visibility = "hidden"
             if(event1[a] == (maid +".jpg")) {
                 index.push(72)
             }
         }
         daynight(index,0,maid)
 
-        /*
-        if(time == 'asa'){
-        for(let i = 0;i < asa.length;i++){
-                if(i<4) continue;
-                document.getElementById("temp"+i+"-2").style.visibility = "visible"
-                document.getElementById("temp"+i).style.visibility = "visible"
-                if(asa[i] != (maid + ".jpg")){
-                        document.getElementById("temp" +i).src="null.png";
-                        document.getElementById("temp"+i).style.visibility = "hidden";
-                        document.getElementById("temp"+i+"-1").style.display = "none";
-
-                        document.getElementById("temp" + i+"-2").onclick = "";
-                        document.getElementById("temp" + i+"-2").style = ""
-                }
-                else{
-                        document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(asa[i].substring(0,asa[i].indexOf("."))),'mywindow');}
-                        document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-
-                        document.getElementById("temp"+i+"-1").style.display = "inherit";
-                        document.getElementById("temp" +i).src=asa[i];
-                        var t = asa[i].charAt(0);
-                        t = t.toUpperCase()
-                        document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ asa[i].substring(1,asa[i].indexOf("."))
-                        
-                }
-                }
-        }
-        else{
-        for(let i = 0;i < yoru.length;i++){
-            if(i<4) continue;
-            document.getElementById("temp"+i+"-2").style.visibility = "visible"
-            if(i >= 72 && i <= 75){
-                document.getElementById("temp" +i).src="null.png";
-                document.getElementById("temp"+i+"-1").innerHTML = "";
-                document.getElementById("temp"+i+"-1").style.display = "none";
-                document.getElementById("temp" + i+"-2").onclick = "";
-                document.getElementById("temp" + i+"-2").style = ""
-                document.getElementById("temp"+i+"-2").style.visibility = "hidden"
-
-                document.getElementById("temp" + i).style.width = '35px'
-                document.getElementById("temp"+i).style.height = '35px'
-                if(i == 75){
-                        for(let a = 0; a < 11; a++){
-                                if(event1[a] != (maid +".jpg") && event1[a] != 'bny.png') {
-                                        document.getElementById("event"+a+"-2").style.visibility = "hidden"
-                                        continue;
-                                }
-                                document.getElementById("event"+a+"-2").style.visibility = "visible"
-                                document.getElementById("event" + a+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(event1[a].substring(0,event1[a].indexOf("."))),'mywindow');}
-                                document.getElementById("event" + a+"-2").style = 'cursor:pointer;'
-                                
-                                document.getElementById("event"+a+"-1").style.display = "inherit";
-                                document.getElementById("event" +a).src=event1[a];
-                                if(event1[a] != "null2.png" && event1[a] != 'bny.png'){
-                                        var t = event1[a].charAt(0);
-                                        t = t.toUpperCase();
-                                        document.getElementById("event"+a+"-1").innerHTML = "Maid " +t+ event1[a].substring(1,event1[a].indexOf("."));
-                                }
-                                else{
-                                        document.getElementById("event"+a+"-1").innerHTML = "Maid ???";
-                                        document.getElementById("event" +a+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
-
-                                }
-                        }
-                        changeFormat();
-
-                }
-            }
-            else if(yoru[i] == null || yoru[i] != maid + '.jpg'){
-                document.getElementById("temp" +i).src="null.png";
-                document.getElementById("temp"+i+"-1").innerHTML = "";
-                document.getElementById("temp"+i+"-1").style.display = "none";
-                document.getElementById("temp"+i).style.visibility = "hidden";
-
-                document.getElementById("temp" + i+"-2").onclick = "";
-                document.getElementById("temp" + i+"-2").style = ""
-            }
-            else{
-                //document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/items/'+yoru[i].substring(0,yoru[i].indexOf(".")),'mywindow');}
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(yoru[i].substring(0,yoru[i].indexOf("."))),'mywindow');}
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-                document.getElementById("temp"+i).style.visibility = "visible"
-
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" +i).src=yoru[i];
-                if(yoru[i] != "null2.png"){
-                    var t = yoru[i].charAt(0);
-                    t = t.toUpperCase();
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ yoru[i].substring(1,yoru[i].indexOf("."));
-                }
-                else{
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid ???";
-                    document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
-
-                }
-            }
-        }
-        }
-        */
 }
 
 function changeS(shift){
         hideEvent();
-        document.getElementById("special").style.flexDirection = 'column';
-    if(shift == 'sae'){
-        for(let i = 4; i <124;i++){
-                document.getElementById("temp" +i).src="maids/sae.jpg";
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/dfmsae/','mywindow');}
-                document.getElementById("temp"+i+"-1").innerHTML = "Maid 🍤🍤🍤🍤"
-                document.getElementById("temp"+i+"-2").style.visibility = "visible"
-                document.getElementById("temp"+i).style.visibility = "visible";
 
-
-
+        if(shift == 'sae'){
+                forFun('sae.jpg','🍤🍤🍤🍤')
+                return;
         }
-        
-        return;
-    }
-    if(shift == 'mitsu'){
-        for(let i = 4; i <124;i++){
-                document.getElementById("temp" +i).src="maids/seal.png";
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/maid_mitsu','mywindow');}
-                document.getElementById("temp"+i+"-1").innerHTML = "Maid 🦭"
-                document.getElementById("temp"+i+"-2").style.visibility = "visible" 
-                document.getElementById("temp"+i).style.visibility = "visible";
 
-
+        if(shift == 'mitsu'){
+                forFun('seal.png','🦭')
+                return;
         }
-        return;
-    }
-    if(shift == "asa"){
-        time = shift;
-        //onclick="window.open('https:/\/www.instagram.com/dfmsae/','mywindow');" style="cursor: pointer;"
-        for(let i = 4;i < 124;i++){
-            if(i<4) continue;
-            document.getElementById("temp"+i+"-2").style.visibility = "visible"
-            document.getElementById("temp"+i).style.visibility = "visible"
 
-            if(asa[i] == null){
-                document.getElementById("temp" +i).src="maids/null.png";
-                document.getElementById("temp"+i).style.visibility = "hidden";
-                document.getElementById("temp"+i+"-1").style.display = "none";
+        if(shift == "asa"){
+                time = shift;
+                for(let i = 4;i < 124;i++){
 
-                document.getElementById("temp" + i+"-2").onclick = "";
-                document.getElementById("temp" + i+"-2").style = ""
-            }
-            else{
-                //document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/items/'+asa[i].substring(0,asa[i].indexOf(".")),'mywindow');}
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(asa[i].substring(0,asa[i].indexOf("."))),'mywindow');}
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" +i).src="maids/" + asa[i];
-                if(asa[i] != "null2.png"){
-                    var t = asa[i].charAt(0);
-                    t = t.toUpperCase()
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ asa[i].substring(1,asa[i].indexOf("."))
+                        if(asa[i] == null){
+                                makeNULL(i);
+                        }
+                        else{
+                                addImgAndName("temp"+i,asa[i],"maids/")
+                        }
                 }
-                else{
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid ???"
-                    document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
-
-                }
-            }
         }
-    }
-    else{
-        time = shift;
-        for(let i = 0;i < 124;i++){
-            if(i<4) continue;
-            document.getElementById("temp"+i+"-2").style.visibility = "visible"
-            if(i >= 72 && i <= 75){
-                document.getElementById("temp" +i).src="maids/null.png";
-                document.getElementById("temp"+i+"-1").innerHTML = "";
-                document.getElementById("temp"+i+"-1").style.display = "none";
-                document.getElementById("temp" + i+"-2").onclick = "";
-                document.getElementById("temp" + i+"-2").style = ""
-                document.getElementById("temp"+i+"-2").style.visibility = "hidden"
+        else{
+                time = shift;
+                for(let i = 4;i < 124;i++){
+                        if(i >= 72 && i <= 75){
 
-                //document.getElementById("temp" + i).style.width = '35px'
-                //document.getElementById("temp"+i).style.height = '35px'
-                if(i == 75){
-                        for(let a = 0; a < 11; a++){
-                                document.getElementById("event"+a+"-2").style.visibility = "visible"
-                                document.getElementById("event" + a+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(event1[a].substring(0,event1[a].indexOf("."))),'mywindow');}
-                                document.getElementById("event" + a+"-2").style = 'cursor:pointer;'
+                                makeNULL(i);
                                 
-                                document.getElementById("event"+a+"-1").style.display = "inherit";
-                                document.getElementById("event" +a).src="maids/"+event1[a];
-                                if(event1[a] != "null2.png" && event1[a] != 'bny.png'){
-                                        var t = event1[a].charAt(0);
-                                        t = t.toUpperCase();
-                                        document.getElementById("event"+a+"-1").innerHTML = "Maid " +t+ event1[a].substring(1,event1[a].indexOf("."));
-                                }
-                                else{
-                                        document.getElementById("event"+a+"-1").innerHTML = "Maid ???";
-                                        document.getElementById("event" +a+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
+                                if(i == 75){
+                                        for(let a = 0; a < 11; a++){
+                                                addImgAndName("event"+a,event1[a],"maids/")
+                                        }
+                                        changeFormat();
 
                                 }
                         }
-                        changeFormat();
-
+                        else if(yoru[i] == null){
+                                makeNULL(i)
+                        }
+                        else{
+                                addImgAndName("temp"+i,yoru[i],"maids/")
+                        }
                 }
-            }
-            else if(yoru[i] == null){
-                document.getElementById("temp" +i).src="maids/null.png";
-                document.getElementById("temp"+i+"-1").innerHTML = "";
-                document.getElementById("temp"+i+"-1").style.display = "none";
-                document.getElementById("temp"+i).style.visibility = "hidden";
-
-                document.getElementById("temp" + i+"-2").onclick = "";
-                document.getElementById("temp" + i+"-2").style = ""
-            }
-            else{
-                //document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/items/'+yoru[i].substring(0,yoru[i].indexOf(".")),'mywindow');}
-                document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(yoru[i].substring(0,yoru[i].indexOf("."))),'mywindow');}
-                document.getElementById("temp" + i+"-2").style = 'cursor:pointer;'
-                document.getElementById("temp"+i).style.visibility = "visible"
-
-                document.getElementById("temp"+i+"-1").style.display = "inherit";
-                document.getElementById("temp" +i).src="maids/"+yoru[i];
-                if(yoru[i] != "null2.png"){
-                    var t = yoru[i].charAt(0);
-                    t = t.toUpperCase();
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid " +t+ yoru[i].substring(1,yoru[i].indexOf("."));
-                }
-                else{
-                    document.getElementById("temp"+i+"-1").innerHTML = "Maid ???";
-                    document.getElementById("temp" + i+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
-
-                }
-            }
         }
-    }
+}
+function forFun(img,name){
+        for(let i = 4; i <124;i++){
+                addImgAndName("temp"+i,img,"maids/")
+                document.getElementById("temp"+i+"-1").innerHTML = "Maid "+name;
+        }
+}
+function addImgAndName(id,img,file){
+        document.getElementById(id+"-2").style.visibility = "visible"
+        document.getElementById(id).style.visibility = "visible"
+        document.getElementById(id+"-2").style = 'cursor:pointer;'
+        document.getElementById(id+"-1").style.display = "inherit";
+        document.getElementById(id).src=file+img;
+        if(img != "null2.png" && img != 'bny.png'){
+                var t = img.charAt(0).toUpperCase();
+                document.getElementById(id+"-1").innerHTML = "Maid " +t+ img.substring(1,img.indexOf("."))
+                document.getElementById(id+"-2").onclick = function() {window.open('https://www.instagram.com/'+instaL.get(img.substring(0,img.indexOf("."))),'mywindow');}
+        }
+        else{
+                document.getElementById(id+"-1").innerHTML = "Maid ???"
+                document.getElementById(id+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
+
+        }
+}
+
+function makeNULL(id){
+        id = 'temp' + id;
+        document.getElementById(id).src="maids/null.png";
+        document.getElementById(id+"-1").innerHTML = "";
+        document.getElementById(id+"-1").style.display = "none";
+        document.getElementById(id).style.visibility = "hidden";
+        document.getElementById(id+"-2").onclick = "";
+        document.getElementById(id+"-2").style = ""
 }
 function changeFormat(){
         for(let a = 0; a < 11; a++){
@@ -323,4 +155,5 @@ function hideEvent(){
                 document.getElementById("temp" + i).style.width = '85px'
                 document.getElementById("temp"+i).style.height = '85px'
         }
+        document.getElementById("special").style.flexDirection = 'column';
 }
