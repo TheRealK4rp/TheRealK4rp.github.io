@@ -146,7 +146,7 @@ img{
 .change{
     position: relative;
     top: 100%;
-    left: 43%;
+    left: 50%;
     display: inline-block;
     text-align: right;
 }
@@ -162,7 +162,7 @@ img{
 .specific{
     position: relative;
     top: 100%;
-    left: 20%;
+    left: 28%;
     display: inline-block;
     text-align: right;
 }
