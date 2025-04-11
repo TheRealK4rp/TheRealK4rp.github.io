@@ -200,10 +200,13 @@ img{
 }
 
 .specificButton a{
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-size:30px 30px;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .buttonStuff a{
@@ -222,7 +225,7 @@ img{
 }
 
 .change:hover .cButton{
-    background-color: #3e8e41;
+    background-color: rgb(24, 137, 157);
 }
 
 .specific:hover .specificButton{
@@ -230,7 +233,11 @@ img{
 }
 
 .specific:hover .sButton{
-    background-color: #3e8e41;
+    background-color: #169eb6;
+}
+
+.specificButton a:hover{
+    background-color: #ddd;
 }
 
 .lol{
