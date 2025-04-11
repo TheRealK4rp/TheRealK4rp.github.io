@@ -5,10 +5,10 @@ public class Main{
     public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
         //printHTML();
-        //printAsa();
+        printAsa();
         //printYoru();
         //printEvent();
-        printMaidButton();
+        //printMaidButton();
     }
 
     public static void printMaidButton(){
