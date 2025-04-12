@@ -1,14 +1,16 @@
 import java.io.*;
 import java.util.Scanner;
+
 public class Main{
 
     public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
         //printHTML();
         //printAsa();
-        printYoru();
+        //printYoru();
         //printEvent();
         //printMaidButton();
+        replaceLines();
     }
 
     public static void printMaidButton(){
@@ -42,11 +44,13 @@ public class Main{
 
     }
 
-    public static void printAsa(){
+    public static String printAsa(){
         try{
             File file = new File("asa.txt");
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            output.append("var asa = [,,,,");
             for(int i = 0;i<30;i++){
                 String line = s.nextLine().toLowerCase();
                 if((i+1) % 7 == 0 || i == 1) line = ",,";
@@ -56,21 +60,31 @@ public class Main{
                     if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
                     else line = "\"" + line.substring(0,a) + ".jpg\",\"" + line.substring(a+1)+".jpg\",";
                 }
-                System.out.print(","+line+",");
+                if(i == 7){
+                    output.append("\"toki.jpg\","+line+",");
+                }
+                else{
+                    output.append(","+line+",");
+                }
             }
             s.close();
+            output.append("]");
+            return output.toString();
 
         }
         catch(Exception e){
             e.printStackTrace();
+            return null;
         }
     }
 
-    public static void printYoru(){
+    public static String printYoru(){
         try{
             File file = new File("yoru.txt");
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            output.append("var yoru = [,,,,");
             for(int i = 0;i<30;i++){
                 
                 String line = s.nextLine().toLowerCase();
@@ -105,18 +119,42 @@ public class Main{
                         line = line.substring(0,a)+".jpg\",\""+line.substring(a+1);
                     }
                 }
-                System.out.print(line);
+                output.append(line);
             }
             s.close();
+            output.append("]");
+            return output.toString();
 
         }
         catch(Exception e){
             e.printStackTrace();
+            return null;
         }
     }
 
-    public static void test(){
-
+    public static void replaceLines() {
+        try {
+            // input the (modified) file content to the StringBuffer "input"
+            BufferedReader file = new BufferedReader(new FileReader("script.js"));
+            StringBuffer inputBuffer = new StringBuffer();
+            String line;
+            int i = 0;
+            while ((line = file.readLine()) != null) {
+                if(i == 0) {line = printAsa(); i++;}
+                else if(i == 1) {line = printYoru(); i++;}
+                inputBuffer.append(line);
+                inputBuffer.append('\n');
+            }
+            file.close();
+    
+            // write the new string with the replaced line OVER the same file
+            FileOutputStream fileOut = new FileOutputStream("script.js");
+            fileOut.write(inputBuffer.toString().getBytes());
+            fileOut.close();
+    
+        } catch (Exception e) {
+            System.out.println("Problem reading file.");
+        }
     }
 
 }
