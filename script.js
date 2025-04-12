@@ -58,7 +58,7 @@ function changeS(shift){
         hideEvent();
 
         if(shift == 'sae'){
-                forFun('sae.jpg','shrimp')
+                forFun('sae.jpg','🍤🍤🍤🍤')
                 return;
         }
 

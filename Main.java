@@ -10,7 +10,8 @@ public class Main{
         //printYoru();
         //printEvent();
         //printMaidButton();
-        replaceLines();
+        //replaceLines();
+        changeFirstTwoLines();
     }
 
     public static void printMaidButton(){
@@ -150,7 +151,6 @@ public class Main{
                 inputBuffer.append('\n');
             }
             file.close();
-    
             // write the new string with the replaced line OVER the same file
             FileOutputStream fileOut = new FileOutputStream("script.js");
             fileOut.write(inputBuffer.toString().getBytes());
@@ -158,6 +158,20 @@ public class Main{
     
         } catch (Exception e) {
             System.out.println("Problem reading file.");
+        }
+    }
+
+    public static void changeFirstTwoLines(){
+        try {
+            File file = new File("script.js");
+            RandomAccessFile in = new RandomAccessFile(file, "rw");
+            String firstline = in.readLine();
+            in.seek(0);
+            in.writeBytes(printAsa());
+            in.readLine();
+            in.writeBytes(printYoru()+"\n");
+            in.close();
+        } catch (Exception e) {
         }
     }
 
