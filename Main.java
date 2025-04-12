@@ -55,7 +55,7 @@ public class Main{
             StringBuilder output = new StringBuilder();
             output.append("var asa = [,,,,");
             for(int i = 0;i<30;i++){
-                String line = s.nextLine().toLowerCase();
+                String line = s.nextLine().toLowerCase().trim();
                 if((i+1) % 7 == 0 || i == 1) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
@@ -90,7 +90,7 @@ public class Main{
             output.append("var yoru = [,,,,");
             for(int i = 0;i<30;i++){
                 
-                String line = s.nextLine().toLowerCase();
+                String line = s.nextLine().toLowerCase().trim();
                 if ((i+1)%7==0 || i == 1) {
                     line = ",,,,";
                 }
