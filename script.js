@@ -68,7 +68,7 @@ function changeS(shift){
         }
 
         if(shift == "asa"){
-                for(let i = 4;i < 124;i++){
+                for(let i = 0;i < 124;i++){
 
                         if(asa[i] == null){
                                 makeNULL(i);
@@ -79,7 +79,7 @@ function changeS(shift){
                 }
         }
         else{
-                for(let i = 4;i < 124;i++){
+                for(let i = 0;i < 124;i++){
                         if(i >= 72 && i <= 75){
 
                                 makeNULL(i);
