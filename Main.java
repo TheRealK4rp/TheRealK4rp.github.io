@@ -140,8 +140,12 @@ public class Main{
             String line;
             int i = 0;
             while ((line = file.readLine()) != null) {
-                if(i == 0) {line = printAsa(); i++;}
-                else if(i == 1) {line = printYoru(); i++;}
+                switch(i){
+                    case 0: 
+                        line = printAsa(); i++; break;
+                    case 1: 
+                        line = printYoru(); i++; break;
+                }
                 inputBuffer.append(line);
                 inputBuffer.append('\n');
             }
