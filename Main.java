@@ -5,12 +5,14 @@ public class Main{
 
     public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
-        //printHTML();
         //printAsa();
         //printYoru();
+
         //printEvent();
         //printMaidButton();
-        //replaceLines();
+        //printHTML(); 
+
+        //replaceLines(); dont use this
         changeFirstTwoLines();
     }
 
