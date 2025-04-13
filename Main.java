@@ -10,7 +10,8 @@ public class Main{
 
         //printEvent();
         //printMaidButton();
-        printHTML(); 
+        //printHTML(); 
+        printcommay();
 
         //replaceLines(); dont use this
         //changeFirstTwoLines();
@@ -26,23 +27,23 @@ public class Main{
         int day = 1;
         for(int i = 0; i<140;i++){
             if(i%4==0){
-                if(day == 18){ System.out.println("</div>\n<div id = 'special'>");}
+                if(day == -1){ System.out.println("</div>\n<div id = 'special'>");}
                 else System.out.println("</div>\n<div>");
-                if(i/4 >=1 && day <=30){
+                if(i/4 >=4 && day <=30){
                     System.out.println(day);
                     day++;
                 }
             }
 
-            if(i%4==0 && day%7!=1){
+            if(i%4==0 && day%7!=5){
                 System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
             }
-            else if(i%4==1 && day%7!=1) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else if(i%4==1 && day%7!=5) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
             else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
-
+            /* 
             if(i==75){
                 printEvent();
-            }
+            }*/
         }
     }
 
@@ -70,11 +71,11 @@ public class Main{
                     else line = "\"" + line.substring(0,a) + ".jpg\",\"" + line.substring(a+1)+".jpg\",";
                 }
                 if(i == 7){
-                    output.append("\"toki.jpg\","+line+",");
+                    output.append("\"toki.jpg\"");
                 }
-                else{
-                    output.append(","+line+",");
-                }
+                output.append(",");
+                output.append(line);
+                output.append(",");
             }
             s.close();
             output.append("]");
@@ -150,10 +151,8 @@ public class Main{
             int i = 0;
             while ((line = file.readLine()) != null) {
                 switch(i){
-                    case 0: 
-                        line = printAsa(); i++; break;
-                    case 1: 
-                        line = printYoru(); i++; break;
+                    case 0 -> {line = printAsa(); i++;}
+                    case 1 -> {line = printYoru(); i++;}
                 }
                 inputBuffer.append(line);
                 inputBuffer.append('\n');
@@ -170,16 +169,32 @@ public class Main{
     }
 
     public static void changeFirstTwoLines(){
-        try {
-            File file = new File("script.js");
-            RandomAccessFile in = new RandomAccessFile(file, "rw");
-            String firstline = in.readLine();
+        try (RandomAccessFile in = new RandomAccessFile(new File("script.js"), "rw")){
+            in.readLine();
             in.seek(0);
             in.writeBytes(printAsa());
             in.readLine();
             in.writeBytes(printYoru());
             in.close();
         } catch (Exception e) {
+        }
+    }
+
+    public static void printcomma(){
+        for(int i = 0;i<35;i++){
+            if(i<4) System.out.print(",,,,");
+            else if((i)%7==0) System.out.print(",,,,");
+            else System.out.print(",\"null2.png\",\"null2.png\",,");
+        }
+    }
+
+    public static void printcommay(){
+        for(int i = 0;i<35;i++){
+            if (i < 4 || i%7==0) {System.out.print(",,,,"); continue;}
+            if((i+3)%7 == 0 || (i+2)%7 == 0 || (i+1) % 7 == 0)
+                System.out.print("\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",");
+            else    
+                System.out.print("\"null2.png\",\"null2.png\",\"null2.png\",,");
         }
     }
 
