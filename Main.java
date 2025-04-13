@@ -10,10 +10,10 @@ public class Main{
 
         //printEvent();
         //printMaidButton();
-        //printHTML(); 
+        printHTML(); 
 
         //replaceLines(); dont use this
-        changeFirstTwoLines();
+        //changeFirstTwoLines();
     }
 
     public static void printMaidButton(){
@@ -33,7 +33,13 @@ public class Main{
                     day++;
                 }
             }
-            System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
+
+            if(i%4==0 && day%7!=1){
+                System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
+            }
+            else if(i%4==1 && day%7!=1) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
+
             if(i==75){
                 printEvent();
             }

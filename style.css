@@ -88,7 +88,27 @@ span{
 .calendar img{
     width: 85px;
     height: 85px;
+    position: relative;
 }
+
+.mana{
+    left: 30%;
+    border-radius: 0%;
+    width: 30px !important;
+    height: 30px !important;
+    position: absolute !important;
+    content: url('other/m.png');
+}
+
+.mana2{
+    left: 30%;
+    border-radius: 0%;
+    width: 30px !important;
+    height: 30px !important;
+    position: absolute !important;
+    content: url('other/m.png');
+}
+
 .eventnum1{
     display: hidden;
 }

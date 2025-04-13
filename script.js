@@ -68,6 +68,7 @@ function changeS(shift){
         }
 
         if(shift == "asa"){
+                addAndRemoveMana('asa');
                 for(let i = 0;i < 124;i++){
 
                         if(asa[i] == null){
@@ -79,6 +80,7 @@ function changeS(shift){
                 }
         }
         else{
+                addAndRemoveMana('yoru');
                 for(let i = 0;i < 124;i++){
                         if(i >= 72 && i <= 75){
 
@@ -127,6 +129,24 @@ function addImgAndName(id,img,file){
                 document.getElementById(id+"-2").onclick = function() {window.open('https://www.instagram.com/' + insta[Math.floor(Math.random() * 26)],'mywindow');}
 
         }
+}
+
+function addAndRemoveMana(shift){
+        var mana = document.getElementsByClassName("mana")
+        var mana2 = document.getElementsByClassName("mana2")
+        if(shift == 'asa'){
+                for (var i = 0; i<mana.length;i++){
+                     mana[i].style.visibility = "hidden"  
+                     mana2[i].style.visibility = "visible"  
+                }
+        }
+        else{
+                for (var i = 0; i<mana.length;i++){
+                        mana2[i].style.visibility = "hidden"  
+                        mana[i].style.visibility = "visible"  
+                   }  
+        }
+                
 }
 
 function makeNULL(id){
