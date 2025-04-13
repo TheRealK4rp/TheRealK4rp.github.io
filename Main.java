@@ -171,7 +171,7 @@ public class Main{
             in.seek(0);
             in.writeBytes(printAsa());
             in.readLine();
-            in.writeBytes(printYoru()+"\n");
+            in.writeBytes(printYoru());
             in.close();
         } catch (Exception e) {
         }
