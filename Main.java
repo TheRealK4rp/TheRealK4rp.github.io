@@ -11,10 +11,10 @@ public class Main{
         //printEvent();
         //printMaidButton();
         //printHTML(); 
-        printcommay();
+        //printcommay();
 
         //replaceLines(); dont use this
-        //changeFirstTwoLines();
+        changeFirstTwoLines();
     }
 
     public static void printMaidButton(){
@@ -169,7 +169,7 @@ public class Main{
     }
 
     public static void changeFirstTwoLines(){
-        try (RandomAccessFile in = new RandomAccessFile(new File("script.js"), "rw")){
+        try (RandomAccessFile in = new RandomAccessFile(new File("index.js"), "rw")){
             in.readLine();
             in.seek(0);
             in.writeBytes(printAsa());
