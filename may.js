@@ -40,7 +40,7 @@ function onlyMember(maid){
         daynight(index,1,maid)
         index=[]
         for(let i = 3; i<yoru.length;i++){
-                if((maid+".jpg") == yoru[i]){
+                if((maid+".jpg") == yoru[i] || (maid+".png") == yoru[i]){
                         index.push(i);
                 }
         }
