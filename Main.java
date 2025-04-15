@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main{
@@ -13,8 +14,8 @@ public class Main{
         //printHTML(); 
         //printcomma();
 
-        //replaceLines(); dont use this
-        changeFirstTwoLines();
+        replaceLines(); 
+        //changeFirstTwoLines(); ok the other one works now lol
     }
 
     public static void printMaidButton(){
@@ -145,7 +146,7 @@ public class Main{
     public static void replaceLines() {
         try {
             // input the (modified) file content to the StringBuffer "input"
-            BufferedReader file = new BufferedReader(new FileReader("script.js"));
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.js"),"UTF-8"));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             int i = 0;
@@ -159,8 +160,8 @@ public class Main{
             }
             file.close();
             // write the new string with the replaced line OVER the same file
-            FileOutputStream fileOut = new FileOutputStream("script.js");
-            fileOut.write(inputBuffer.toString().getBytes());
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("index.js"),StandardCharsets.UTF_8));
+            fileOut.write(inputBuffer.toString());
             fileOut.close();
     
         } catch (Exception e) {
