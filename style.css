@@ -98,6 +98,7 @@ span{
     height: 30px !important;
     position: absolute !important;
     content: url('other/m.png');
+    z-index:100;
 }
 
 .mana2{
@@ -107,6 +108,7 @@ span{
     height: 30px !important;
     position: absolute !important;
     content: url('other/m.png');
+    z-index:100;
 }
 
 .eventnum1{
