@@ -4,6 +4,7 @@ var insta = ["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadolly
 const instaL = new Map([['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
 const event1 = ["sae.jpg","latte.jpg","nyan.jpg","ai.jpg","aki.jpg","reyna.jpg","moon.jpg","rose.jpg","mari.jpg","poyo.jpg","bny.png"]
 
+//this just puts the maid + shift they work
 function daynight(array,ti,maid){
         for(let a = 0; a<array.length; a++){
                 var i = (Math.floor(array[a]/4)*4);
@@ -25,6 +26,7 @@ function daynight(array,ti,maid){
         
 }
 
+//searches for shifts by going through all of them..
 function onlyMember(maid){
         var index = []
         changeS('asa');
@@ -40,7 +42,7 @@ function onlyMember(maid){
         daynight(index,1,maid)
         index=[]
         for(let i = 4; i<yoru.length;i++){
-                if((maid+".jpg") == yoru[i]){
+                if((maid+".jpg") == yoru[i] ){
                         index.push(i);
                 }
         }
@@ -55,6 +57,7 @@ function onlyMember(maid){
 
 }
 
+//changes the shifts from asa<->yoru
 function changeS(shift){
         hideEvent();
 
@@ -105,11 +108,13 @@ function changeS(shift){
                 }
         }
 }
+//hides the element
 function hide(id){
         document.getElementById(id+"-2").style.visibility = "hidden"
         document.getElementById(id).style.visibility = "hidden"
 }
 
+//hides the manager M thing
 function hideMana(){
         var mana = document.getElementsByClassName("mana")
         var mana2 = document.getElementsByClassName("mana2")
@@ -119,6 +124,7 @@ function hideMana(){
         }
 }
 
+//this is for the non serious stuff
 function forFun(img,name){
         for(let i = 4; i <140;i++){
                 addImgAndName("temp"+i,img,"maids/")
@@ -126,6 +132,7 @@ function forFun(img,name){
         }
 }
 
+//adds the image and name to one of the divs also links their insta
 function addImgAndName(id,img,file){
         document.getElementById(id+"-2").style.visibility = "visible"
         document.getElementById(id).style.visibility = "visible"
@@ -144,6 +151,7 @@ function addImgAndName(id,img,file){
         }
 }
 
+// hides the manager M depending on asa and yoru because of how i have them positioned lol
 function addAndRemoveMana(shift){
         var mana = document.getElementsByClassName("mana")
         var mana2 = document.getElementsByClassName("mana2")
@@ -163,6 +171,7 @@ function addAndRemoveMana(shift){
                 
 }
 
+// makes the image disappear and removes any pointer events
 function makeNULL(id){
         id = 'temp' + id;
         document.getElementById(id).src="maids/null.png";
@@ -174,6 +183,8 @@ function makeNULL(id){
         document.getElementById(id+"-2").onclick = "";
         document.getElementById(id+"-2").style = ""
 }
+
+//move the event divs and temp divs so they are displaeyd properly
 function changeFormat(){
         for(let a = 0; a < 11; a++){
                 document.getElementById("event"+a+"-2").style.order = a+1;
@@ -186,6 +197,7 @@ function changeFormat(){
 
 }
 
+// resets event
 function hideEvent(){
         for(let a = 0; a < 11; a++){
                 document.getElementById("event"+a+"-2").style.visibility = "hidden"
@@ -197,6 +209,7 @@ function hideEvent(){
         document.getElementById("special").style.flexDirection = 'column';
 }
 
+//for startup to hide the mana and assign images to the divs
 function startUp(){
         changeS('asa');
         var mana = document.getElementsByClassName("mana")
