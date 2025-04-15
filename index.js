@@ -143,6 +143,7 @@ function addAndRemoveMana(shift){
         else{
                 for (var i = 1; i<mana.length-4;i++){
                         mana2[i].style.visibility = "hidden"  
+                        if(i==15) continue;
                         mana[i].style.visibility = "visible"  
                 }  
         }
