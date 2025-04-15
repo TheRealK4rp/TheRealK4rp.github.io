@@ -11,10 +11,10 @@ public class Main{
         //printEvent();
         //printMaidButton();
         //printHTML(); 
-        //printcommay();
+        printcomma();
 
         //replaceLines(); dont use this
-        changeFirstTwoLines();
+        //changeFirstTwoLines();
     }
 
     public static void printMaidButton(){
@@ -29,16 +29,16 @@ public class Main{
             if(i%4==0){
                 if(day == -1){ System.out.println("</div>\n<div id = 'special'>");}
                 else System.out.println("</div>\n<div>");
-                if(i/4 >=4 && day <=30){
+                if(i/4 >=3 && day <=30){
                     System.out.println(day);
                     day++;
                 }
             }
 
-            if(i%4==0 && day%7!=5){
+            if(i%4==0 && day%7!=6){
                 System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
             }
-            else if(i%4==1 && day%7!=5) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else if(i%4==1 && day%7!=6) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
             else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
             /* 
             if(i==75){
@@ -182,15 +182,15 @@ public class Main{
 
     public static void printcomma(){
         for(int i = 0;i<35;i++){
-            if(i<4) System.out.print(",,,,");
+            if(i<3||i==34) System.out.print(",,,,");
             else if((i)%7==0) System.out.print(",,,,");
             else System.out.print(",\"null2.png\",\"null2.png\",,");
         }
     }
-
+    //yoru
     public static void printcommay(){
         for(int i = 0;i<35;i++){
-            if (i < 4 || i%7==0) {System.out.print(",,,,"); continue;}
+            if (i < 3 || i%7==0 || i == 34) {System.out.print(",,,,"); continue;}
             if((i+3)%7 == 0 || (i+2)%7 == 0 || (i+1) % 7 == 0)
                 System.out.print("\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",");
             else    
