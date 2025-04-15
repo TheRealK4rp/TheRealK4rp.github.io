@@ -198,5 +198,10 @@ function hideEvent(){
 
 function startUp(){
         changeS('asa');
-        hideMana();
+        var mana = document.getElementsByClassName("mana")
+        var mana2 = document.getElementsByClassName("mana2")
+        for (var i = mana.length-4; i<mana.length;i++){
+                mana2[i].style.visibility = "hidden"  
+                mana[i].style.visibility = "hidden"  
+        }
 }
