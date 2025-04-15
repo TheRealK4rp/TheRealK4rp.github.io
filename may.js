@@ -81,7 +81,10 @@ function changeS(shift){
                         }
                         else{
                                 addImgAndName("temp"+i,yoru[i],"maids/")
-                                if(i==24) resizeI("temp"+i,'180px','180px');
+                                if(i==24) {
+                                        resizeI("temp"+i,'180px','180px');
+                                        document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/strike-it-ririch-rockin-casino-live','mywindow');}
+                                }
                                 
                         }
                 }
