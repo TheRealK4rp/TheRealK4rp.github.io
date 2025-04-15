@@ -148,15 +148,15 @@ function addAndRemoveMana(shift){
         var mana = document.getElementsByClassName("mana")
         var mana2 = document.getElementsByClassName("mana2")
         if(shift == 'asa'){
-                for (var i = 1; i<mana.length-4;i++){
+                for (var i = 0; i<mana.length-4;i++){
                      mana[i].style.visibility = "hidden"  
                      mana2[i].style.visibility = "visible"  
                 }
         }
         else{
-                for (var i = 1; i<mana.length-4;i++){
+                for (var i = 0; i<mana.length-4;i++){
                         mana2[i].style.visibility = "hidden"  
-                        if(i==15) continue;
+                        if(i==14) continue;
                         mana[i].style.visibility = "visible"  
                 }  
         }
