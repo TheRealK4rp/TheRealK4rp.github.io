@@ -91,6 +91,7 @@ function changeS(shift){
                                         for(let a = 0; a < 11; a++){
                                                 addImgAndName("event"+a,event1[a],"maids/")
                                         }
+                                        document.getElementById("event10-2").onclick = function() {window.open("https://www.asayorumaidcafe.com/event-details/hop-step-spring",'mywindow');}
                                         changeFormat();
 
                                 }
