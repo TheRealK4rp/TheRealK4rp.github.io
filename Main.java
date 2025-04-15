@@ -11,10 +11,10 @@ public class Main{
         //printEvent();
         //printMaidButton();
         //printHTML(); 
-        printcomma();
+        //printcomma();
 
         //replaceLines(); dont use this
-        //changeFirstTwoLines();
+        changeFirstTwoLines();
     }
 
     public static void printMaidButton(){
