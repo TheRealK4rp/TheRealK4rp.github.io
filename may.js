@@ -45,6 +45,7 @@ function onlyMember(maid){
                 }
         }
         daynight(index,0,maid)
+        hideMana()
 
 }
 
@@ -158,6 +159,17 @@ function makeNULL(id){
         document.getElementById(id+"-2").onclick = "";
         document.getElementById(id+"-2").style = ""
         resize(id)
+}
+
+function hideMana(){
+        var mana = document.getElementsByClassName("mana")
+        var mana2 = document.getElementsByClassName("mana2")
+        for (var i = 0; i<mana.length;i++){
+                mana[i].style.visibility = "hidden"  
+        }  
+        for (var i = 0; i<mana2.length;i++){
+                mana2[i].style.visibility = "hidden"  
+        }
 }
 
 

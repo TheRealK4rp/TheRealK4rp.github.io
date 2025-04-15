@@ -51,6 +51,7 @@ function onlyMember(maid){
             }
         }
         daynight(index,0,maid)
+        hideMana();
 
 }
 
@@ -107,12 +108,23 @@ function hide(id){
         document.getElementById(id+"-2").style.visibility = "hidden"
         document.getElementById(id).style.visibility = "hidden"
 }
+
+function hideMana(){
+        var mana = document.getElementsByClassName("mana")
+        var mana2 = document.getElementsByClassName("mana2")
+        for (var i = 0; i<mana.length;i++){
+                mana2[i].style.visibility = "hidden"  
+                mana[i].style.visibility = "hidden"  
+        }
+}
+
 function forFun(img,name){
         for(let i = 4; i <140;i++){
                 addImgAndName("temp"+i,img,"maids/")
                 document.getElementById("temp"+i+"-1").innerHTML = "Maid "+name;
         }
 }
+
 function addImgAndName(id,img,file){
         document.getElementById(id+"-2").style.visibility = "visible"
         document.getElementById(id).style.visibility = "visible"
@@ -186,12 +198,5 @@ function hideEvent(){
 
 function startUp(){
         changeS('asa');
-        var mana = document.getElementsByClassName("mana")
-        var mana2 = document.getElementsByClassName("mana2")
-        mana2[0].style.visibility = "hidden"  
-        mana[0].style.visibility = "hidden"
-        for (var i = mana.length-4; i<mana.length;i++){
-                mana2[i].style.visibility = "hidden"  
-                mana[i].style.visibility = "hidden"  
-        }
+        hideMana();
 }
