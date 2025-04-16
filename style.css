@@ -12,7 +12,7 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     font-family: Verdana, Tahoma, sans-serif;
     user-select: none;
 }
