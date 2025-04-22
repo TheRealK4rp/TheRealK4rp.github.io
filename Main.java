@@ -19,8 +19,8 @@ public class Main{
     }
 
     public static void printMaidButton(){
-        for(String i : maids){
-            System.out.println("<a onclick = \"onlyMember('"+ i +"')\">"+Character.toUpperCase(i.charAt(0))+i.substring(1)+"</a>");
+        for(String maid : maids){
+            System.out.println("<a onclick = \"onlyMember('"+ maid +"')\">"+Character.toUpperCase( maid.charAt(0))+maid.substring(1)+"</a>");
         }
     }
 
