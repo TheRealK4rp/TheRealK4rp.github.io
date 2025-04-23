@@ -16,6 +16,7 @@ public class Main{
 
         replaceLines(); 
         //changeFirstTwoLines(); ok the other one works now lol
+        // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
     }
 
     public static void printMaidButton(){
