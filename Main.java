@@ -62,18 +62,15 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,");
-            for(int i = 0;i<30;i++){
+            output.append("var asa = [,,,,,,,,,,,,");
+            for(int i = 0;i<31;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if((i+1) % 7 == 0 || i == 1) line = ",,";
+                if((i+3) % 7 == 0) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
                     if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
                     else line = "\"" + line.substring(0,a) + ".jpg\",\"" + line.substring(a+1)+".jpg\",";
-                }
-                if(i == 7){
-                    output.append("\"toki.jpg\"");
                 }
                 output.append(",");
                 output.append(line);
@@ -96,15 +93,14 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,");
-            for(int i = 0;i<30;i++){
-                
+            output.append("var yoru = [,,,,,,,,,,,,");
+            for(int i = 0;i<31;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if ((i+1)%7==0 || i == 1) {
+                if ((i+3)%7==0) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
-                    if((i+3)%7 == 0 || (i+2)%7 == 0 || (i+4) % 7 == 0)
+                    if((i+5)%7 == 0 || (i+4)%7 == 0 || (i+6) % 7 == 0)
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -117,7 +113,7 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
-                            if(!((i+3)%7 == 0 || (i+2)%7 == 0 || (i+4) % 7 == 0)){ 
+                            if(!((i+4)%7 == 0 || (i+6)%7 == 0 || (i+5) % 7 == 0)){ 
                                 d--;
                                 f=true;
                             }
@@ -147,7 +143,7 @@ public class Main{
     public static void replaceLines() {
         try {
             // input the (modified) file content to the StringBuffer "input"
-            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.js"),"UTF-8"));
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("may.js"),"UTF-8"));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             int i = 0;
@@ -161,7 +157,7 @@ public class Main{
             }
             file.close();
             // write the new string with the replaced line OVER the same file
-            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("index.js"),StandardCharsets.UTF_8));
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("may.js"),StandardCharsets.UTF_8));
             fileOut.write(inputBuffer.toString());
             fileOut.close();
     
