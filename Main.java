@@ -99,6 +99,9 @@ public class Main{
                 if ((i+3)%7==0) {
                     line = ",,,,";
                 }
+                else if (i == 3) {
+                    line = "\"riri.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
+                }
                 else if(line.equals("")){
                     if((i+5)%7 == 0 || (i+4)%7 == 0 || (i+6) % 7 == 0)
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
