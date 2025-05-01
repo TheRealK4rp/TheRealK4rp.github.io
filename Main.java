@@ -171,7 +171,8 @@ public class Main{
             System.out.println("Problem reading file.");
         }
     }
-
+    //boom random comment
+    
     public static void changeFirstTwoLines(){
         try (RandomAccessFile in = new RandomAccessFile(new File("index.js"), "rw")){
             in.readLine();
