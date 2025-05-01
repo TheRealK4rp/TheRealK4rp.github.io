@@ -1,10 +1,9 @@
-var asa = [,,,,,"sumi.jpg","moon.jpg",,,,,,,"toki.jpg","nyan.jpg",,,"mitsu.jpg","aki.jpg",,,"riri.jpg","soul.jpg",,,"dolly.jpg","moon.jpg",,,,,,"toki.jpg","sakurin.jpg","poyo.jpg",,,"sumi.jpg","rose.jpg",,,"sumi.jpg","melly.jpg",,,"mitsu.jpg","mahou.jpg",,,"mitsu.jpg","berry.jpg",,,"jia.jpg","berry.jpg",,,,,,,"reyna.jpg","moon.jpg",,,"sakurin.jpg","toki.jpg",,,"dolly.jpg","aoi.jpg",,,"mitsu.jpg","sumi.jpg",,,"riri.jpg","latte.jpg",,,"jia.jpg","saiki.jpg",,,,,,,"sakurin.jpg","aki.jpg",,,"sakurin.jpg","poyo.jpg",,,"sumi.jpg","moon.jpg",,,"dolly.jpg","rose.jpg",,,"mitsu.jpg","latte.jpg",,,"toki.jpg","soul.jpg",,,,,,,"sakurin.jpg","melly.jpg",,,"toki.jpg","poyo.jpg",,]
-var yoru = [,,,,"dolly.jpg","ai.jpg","nico.jpg",,,,,,"sakurin.jpg","rose.jpg","dolly.jpg",,"sae.jpg","moon.jpg","latte.jpg","dolly.jpg","mitsu.jpg","saiki.jpg","poyo.jpg","sumi.jpg","riri.jpg","nyan.jpg","rose.jpg","soul.jpg",,,,,"sumi.jpg","nico.jpg","melly.jpg",,"sae.jpg","yuna.jpg","aki.jpg",,"toki.jpg","aoi.jpg","dolly.jpg",,"sakurin.jpg","poyo.jpg","ai.jpg","aki.jpg","riri.jpg","poyo.jpg","nico.jpg","sumi.jpg","sakurin.jpg","moon.jpg","nyan.jpg","saiki.jpg",,,,,"sumi.jpg","dolly.jpg","yuna.jpg",,"sae.jpg","soul.jpg","melly.jpg",,"sakurin.jpg","latte.jpg","nico.jpg",,"null2.png","null2.png","null2.png","null2.png","sumi.jpg","mari.jpg","riri.jpg","ai.jpg","mitsu.jpg","nyan.jpg","moon.jpg","soul.jpg",,,,,"sumi.jpg","melly.jpg","ai.jpg",,"sae.jpg","rose.jpg","yuna.jpg",,"sakurin.jpg","latte.jpg","ai.jpg",,"sumi.jpg","poyo.jpg","nico.jpg","sakurin.jpg","riri.jpg","reyna.jpg","soul.jpg","ai.jpg","jia.jpg","saiki.jpg","mitsu.jpg","sumi.jpg",,,,,"dolly.jpg","rose.jpg","mari.jpg",,"sumi.jpg","melly.jpg","moon.jpg",,]
+var asa = [,,,,,,,,,,,,,"sakurin.jpg","null2.png",,,"dolly.jpg","rose.jpg",,,"dolly.jpg","null2.png",,,"sakurin.jpg","null2.png",,,,,,,"dolly.jpg","poyo.jpg",,,"sakurin.jpg","null2.png",,,"null2.png","null2.png",,,"sumi.jpg","null2.png",,,"berry.jpg","null2.png",,,"null2.png","null2.png",,,,,,,"sumi.jpg","null2.png",,,"null2.png","null2.png",,,"sumi.jpg","poyo.jpg",,,"mitsu.jpg","null2.png",,,"berry.jpg","null2.png",,,"mitsu.jpg","null2.png",,,,,,,"null2.png","null2.png",,,"dolly.jpg","poyo.jpg",,,"null2.png","null2.png",,,"sakurin.jpg","null2.png",,,"sakurin.jpg","null2.png",,,"null2.png","null2.png",,,,,,,"sakurin.jpg","null2.png",,,"sakurin.jpg","poyo.jpg",,,"dolly.jpg","null2.png",,,"mitsu.jpg","poyo.jpg",,,"mari.jpg","null2.png",,]
+var yoru = [,,,,,,,,,,,,"sakurin.jpg","ai.jpg","poyo.jpg",,"sae.jpg","mari.jpg","sumi.jpg","sakurin.jpg","sae.jpg","latte.jpg","null2.png","null2.png","riri.png","null2.png","null2.png","null2.png",,,,,"sumi.jpg","rose.jpg","null2.png",,"sae.jpg","null2.png","null2.png",,"sakurin.jpg","poyo.jpg","null2.png",,"dolly.jpg","sae.jpg","null2.png","null2.png","sakurin.jpg","poyo.jpg","mari.jpg","sumi.jpg","sae.jpg","dolly.jpg","null2.png","null2.png",,,,,"sakurin.jpg","dolly.jpg","rose.jpg",,"null2.png","null2.png","null2.png",,"sakurin.jpg","nico.jpg","latte.jpg",,"sae.jpg","sumi.jpg","null2.png","null2.png","sakurin.jpg","mitsu.jpg","null2.png","null2.png","jia.jpg","null2.png","null2.png","null2.png",,,,,"sakurin.jpg","nico.jpg","null2.png",,"sae.jpg","rose.jpg","null2.png",,"nico.jpg","null2.png","null2.png",,"sakurin.jpg","ai.jpg","dolly.jpg","null2.png","mitsu.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"nico.jpg","null2.png","null2.png",,"sae.jpg","null2.png","null2.png",,"rose.jpg","null2.png","null2.png",,"sae.jpg","nico.jpg","latte.jpg","null2.png","dolly.jpg","mitsu.jpg","null2.png","null2.png",]
 var insta = ["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadollyy","maidjia","latte_maid","maid.mahou","wan.wan.mari","maid.melly","maid_mitsu","moemoe.moon","nicotheunbridled","maid_niya","maidnyan","maid.poyo","otohimehaato","ririmaid","bytesizeangel","dfmsae","maid_saiki","sakurin_maid","moomookyun","maid_sumi","toki.etc_","yuna.maid"]
 const instaL = new Map([['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
-const event1 = ["sae.jpg","latte.jpg","nyan.jpg","ai.jpg","aki.jpg","reyna.jpg","moon.jpg","null2.png","mari.jpg","poyo.jpg","bny.png"]
+const event1 = ["sae.jpg","latte.jpg","nyan.jpg","ai.jpg","aki.jpg","reyna.jpg","moon.jpg","rose.jpg","null2.png","null2.png","bny.png"]
 
-//this just puts the maid + shift they work
 function daynight(array,ti,maid){
         for(let a = 0; a<array.length; a++){
                 var i = (Math.floor(array[a]/4)*4);
@@ -26,40 +25,31 @@ function daynight(array,ti,maid){
         
 }
 
-//searches for shifts by going through all of them..
 function onlyMember(maid){
         var index = []
         changeS('asa');
-        for(let i = 4; i < 140; i++){
+        for(let i = 12; i < 140; i++){
                 hide("temp"+i)
         }
 
-        for(let i = 4; i<asa.length;i++){
+        for(let i = 3; i<asa.length;i++){
                 if((maid+".jpg") == asa[i]){
                         index.push(i);
                 }
         }
         daynight(index,1,maid)
         index=[]
-        for(let i = 4; i<yoru.length;i++){
-                if((maid+".jpg") == yoru[i] ){
+        for(let i = 3; i<yoru.length;i++){
+                if((maid+".jpg") == yoru[i] || (maid+".png") == yoru[i]){
                         index.push(i);
                 }
         }
-        for(let a = 0; a < 11; a++){
-            hide("event"+a);
-            if(event1[a] == (maid +".jpg")) {
-                index.push(72)
-            }
-        }
         daynight(index,0,maid)
-        hideMana();
+        hideMana()
 
 }
 
-//changes the shifts from asa<->yoru
 function changeS(shift){
-        hideEvent();
 
         if(shift == 'sae'){
                 forFun('sae.jpg','🍤🍤🍤🍤')
@@ -76,7 +66,7 @@ function changeS(shift){
                 for(let i = 0;i < 140;i++){
 
                         if(asa[i] == null){
-                                makeNULL(i);
+                                makeNULL('temp'+i);
                         }
                         else{
                                 addImgAndName("temp"+i,asa[i],"maids/")
@@ -86,59 +76,41 @@ function changeS(shift){
         else{
                 addAndRemoveMana('yoru');
                 for(let i = 0;i < 140;i++){
-                        if(i >= 72 && i <= 75){
-
-                                makeNULL(i);
-
-                                if(i == 75){
-                                        for(let a = 0; a < 11; a++){
-                                                addImgAndName("event"+a,event1[a],"maids/")
-                                        }
-                                        document.getElementById("event10-2").onclick = function() {window.open("https://www.asayorumaidcafe.com/event-details/hop-step-spring",'mywindow');}
-                                        changeFormat();
-
-                                }
-                        }
-                        else if(yoru[i] == null){
-                                makeNULL(i)
+                        if(yoru[i] == null || i == 27 || i == 25|| i == 26|| i == 81|| i == 82 || i == 83){
+                                makeNULL('temp'+i)
                         }
                         else{
                                 addImgAndName("temp"+i,yoru[i],"maids/")
+                                if(i==24) {
+                                        resizeI("temp"+i,'180px','180px');
+                                        document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/strike-it-ririch-rockin-casino-live','mywindow');}
+                                }
+                                if(i == 80){
+                                        resizeI("temp"+i,'180px','180px');
+                                        document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/soiree-under-the-stars-jias-birthday','mywindow');}
+                                }
+                                
                         }
                 }
         }
 }
-//hides the element
 function hide(id){
         document.getElementById(id+"-2").style.visibility = "hidden"
         document.getElementById(id).style.visibility = "hidden"
 }
-
-//hides the manager M thing
-function hideMana(){
-        var mana = document.getElementsByClassName("mana")
-        var mana2 = document.getElementsByClassName("mana2")
-        for (var i = 0; i<mana.length;i++){
-                mana2[i].style.visibility = "hidden"  
-                mana[i].style.visibility = "hidden"  
-        }
-}
-
-//this is for the non serious stuff
 function forFun(img,name){
-        for(let i = 4; i <140;i++){
+        for(let i = 12; i <136;i++){
                 addImgAndName("temp"+i,img,"maids/")
                 document.getElementById("temp"+i+"-1").innerHTML = "Maid "+name;
         }
 }
-
-//adds the image and name to one of the divs also links their insta
 function addImgAndName(id,img,file){
         document.getElementById(id+"-2").style.visibility = "visible"
         document.getElementById(id).style.visibility = "visible"
         document.getElementById(id+"-2").style = 'cursor:pointer;'
         document.getElementById(id+"-1").style.display = "inherit";
         document.getElementById(id).src=file+img;
+        resize(id)
         if(img != "null2.png" && img != 'bny.png'){
                 var t = img.charAt(0).toUpperCase();
                 document.getElementById(id+"-1").innerHTML = "Maid " +t+ img.substring(1,img.indexOf("."))
@@ -151,29 +123,40 @@ function addImgAndName(id,img,file){
         }
 }
 
-// hides the manager M depending on asa and yoru because of how i have them positioned lol
 function addAndRemoveMana(shift){
         var mana = document.getElementsByClassName("mana")
         var mana2 = document.getElementsByClassName("mana2")
         if(shift == 'asa'){
-                for (var i = 0; i<mana.length-4;i++){
+                for (var i = 0; i<mana.length;i++){
                      mana[i].style.visibility = "hidden"  
-                     mana2[i].style.visibility = "visible"  
                 }
+                for (var i = 0; i<mana2.length;i++){
+                        mana2[i].style.visibility = "visible"  
+                   }
         }
         else{
-                for (var i = 0; i<mana.length-4;i++){
-                        mana2[i].style.visibility = "hidden"  
-                        if(i==14) continue;
+                for (var i = 0; i<mana.length;i++){
                         mana[i].style.visibility = "visible"  
+                }  
+                for (var i = 0; i<mana2.length;i++){
+                        mana2[i].style.visibility = "hidden"  
                 }  
         }
                 
 }
 
-// makes the image disappear and removes any pointer events
+function resize(id){
+        resizeI(id,'85px','85px');
+}
+
+function resizeI(id,w,h){
+        document.getElementById(id).style.width = w
+        document.getElementById(id).style.height = h
+        document.getElementById(id+'-2').style.width = '89.25px'
+        document.getElementById(id+'-2').style.height = '91.25px'
+}
+
 function makeNULL(id){
-        id = 'temp' + id;
         document.getElementById(id).src="maids/null.png";
         document.getElementById(id+"-1").innerHTML = "";
         document.getElementById(id+"-1").style.display = "none";
@@ -182,40 +165,21 @@ function makeNULL(id){
         document.getElementById(id+"-2").style.visibility = "hidden";
         document.getElementById(id+"-2").onclick = "";
         document.getElementById(id+"-2").style = ""
+        resize(id)
 }
 
-//move the event divs and temp divs so they are displaeyd properly
-function changeFormat(){
-        for(let a = 0; a < 11; a++){
-                document.getElementById("event"+a+"-2").style.order = a+1;
-        }
-        for(let i = 72; i <= 75; i++){
-                document.getElementById("temp" + i+"-2").style.order = i-60;
-        }
-        document.getElementById("special").style.flexDirection = 'initial';
-        document.getElementById("special").style.flexBasis = "fit-content";
-
-}
-
-// resets event
-function hideEvent(){
-        for(let a = 0; a < 11; a++){
-                document.getElementById("event"+a+"-2").style.visibility = "hidden"
-        }
-        for(let i = 72; i <= 75; i++){
-                document.getElementById("temp" + i).style.width = '85px'
-                document.getElementById("temp"+i).style.height = '85px'
-        }
-        document.getElementById("special").style.flexDirection = 'column';
-}
-
-//for startup to hide the mana and assign images to the divs
-function startUp(){
-        changeS('asa');
+function hideMana(){
         var mana = document.getElementsByClassName("mana")
         var mana2 = document.getElementsByClassName("mana2")
-        for (var i = mana.length-4; i<mana.length;i++){
-                mana2[i].style.visibility = "hidden"  
+        for (var i = 0; i<mana.length;i++){
                 mana[i].style.visibility = "hidden"  
+        }  
+        for (var i = 0; i<mana2.length;i++){
+                mana2[i].style.visibility = "hidden"  
         }
+}
+
+
+function startUp(){
+        changeS('asa');
 }
