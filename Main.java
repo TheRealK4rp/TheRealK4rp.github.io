@@ -65,7 +65,7 @@ public class Main{
             output.append("var asa = [,,,,,,,,,,,,");
             for(int i = 0;i<31;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if((i+3) % 7 == 0) line = ",,";
+                if((i+3) % 7 == 0 || i == 13) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -96,7 +96,7 @@ public class Main{
             output.append("var yoru = [,,,,,,,,,,,,");
             for(int i = 0;i<31;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if ((i+3)%7==0) {
+                if ((i+3)%7==0 || i == 13) {
                     line = ",,,,";
                 }
                 else if (i == 3) {
