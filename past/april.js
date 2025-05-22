@@ -138,7 +138,7 @@ function addImgAndName(id,img,file){
         document.getElementById(id).style.visibility = "visible"
         document.getElementById(id+"-2").style = 'cursor:pointer;'
         document.getElementById(id+"-1").style.display = "inherit";
-        document.getElementById(id).src=file+img;
+        document.getElementById(id).src="/"+file+img;
         if(img != "null2.png" && img != 'bny.png'){
                 var t = img.charAt(0).toUpperCase();
                 document.getElementById(id+"-1").innerHTML = "Maid " +t+ img.substring(1,img.indexOf("."))
@@ -174,7 +174,7 @@ function addAndRemoveMana(shift){
 // makes the image disappear and removes any pointer events
 function makeNULL(id){
         id = 'temp' + id;
-        document.getElementById(id).src="maids/null.png";
+        document.getElementById(id).src="/maids/null.png";
         document.getElementById(id+"-1").innerHTML = "";
         document.getElementById(id+"-1").style.display = "none";
         document.getElementById(id+"-2").style.display = "none";
