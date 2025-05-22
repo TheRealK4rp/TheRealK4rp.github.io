@@ -66,7 +66,7 @@ function changeS(shift){
                 for(let i = 0;i < 140;i++){
 
                         if(i == 108){
-                                addImgAndName("temp"+i,"bkg.png","other/")   
+                                addImgAndName("temp"+i,"hyper1.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
                                 document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-1','mywindow');}
                         }
