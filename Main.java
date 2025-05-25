@@ -12,9 +12,9 @@ public class Main{
         //printEvent();
         //printMaidButton();
         //printHTML(); 
-        printcomma();
+        //printcomma();
 
-        //replaceLines(); 
+        replaceLines(); 
 
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
