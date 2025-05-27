@@ -41,7 +41,7 @@ public class Main{
             if(i%4==0 && day%7!=3 && i > 23 && i < 144){
                 System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
             }
-            else if(i%4==1 && day%7!=3 && i > 32 && i <144) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else if(i%4==1 && day%7!=3 && day%7 != 4 && day%7 != 5 && i > 32 && i <144) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
             else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
             /* 
             if(i==75){
@@ -57,6 +57,37 @@ public class Main{
 
     }
 
+    public static String printAsa(){
+        try{
+            File file = new File("asa.txt");
+            FileInputStream in = new FileInputStream(file);
+            Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            output.append("var asa = [,,,,,,,,,,,,,,,,,,,,,,,,");
+            for(int i = 0;i<32;i++){
+                String line = s.nextLine().toLowerCase().trim();
+                if((i+6) % 7 == 0 || (i+4) % 7 == 0 || (i+5) % 7 == 0) line = ",,";
+                else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
+                else{
+                    int a = line.indexOf(" ");
+                    if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
+                    else line = "\"" + line.substring(0,a) + ".jpg\",\"" + line.substring(a+1)+".jpg\",";
+                }
+                output.append(",");
+                output.append(line);
+                output.append(",");
+            }
+            s.close();
+            output.append("]");
+            return output.toString();
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    /* ARCHIVE
     public static String printAsa(){
         try{
             File file = new File("asa.txt");
@@ -86,7 +117,7 @@ public class Main{
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
 
     public static String printYoru(){
         try{
@@ -94,20 +125,14 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,,,,,,,,,");
-            for(int i = 0;i<31;i++){
+            output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,,,,,");
+            for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if ((i+3)%7==0) {
+                if ((i+6)%7==0) {
                     line = ",,,,";
                 }
-                else if (i == 3) {
-                    line = "\"riri.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
-                }
-                else if (i == 17){
-                    line = "\"jia.jpg\",\"null2.png\",\"null2.png\",\"null2.png\",";
-                }
                 else if(line.equals("")){
-                    if((i+5)%7 == 0 || (i+4)%7 == 0 || (i+6) % 7 == 0)
+                    if((i+0)%7 == 0 || (i+1)%7 == 0 || (i+2) % 7 == 0)
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -150,7 +175,7 @@ public class Main{
     public static void replaceLines() {
         try {
             // input the (modified) file content to the StringBuffer "input"
-            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.js"),"UTF-8"));
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("june.js"),"UTF-8"));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             int i = 0;
@@ -164,7 +189,7 @@ public class Main{
             }
             file.close();
             // write the new string with the replaced line OVER the same file
-            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("index.js"),StandardCharsets.UTF_8));
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("june.js"),StandardCharsets.UTF_8));
             fileOut.write(inputBuffer.toString());
             fileOut.close();
     
