@@ -128,7 +128,7 @@ public class Main{
             output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if ((i+6)%7==0) {
+                if ((i+6)%7==0 || i == 10) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
