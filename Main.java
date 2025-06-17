@@ -14,10 +14,32 @@ public class Main{
         //printHTML(); 
         //printcomma();
 
-        replaceLines(); 
-
+        //replaceLines(); 
+        removelink("Koi no Yokushiryoku-type EXCITER - 153 BPM https://www.youtube.com/watch?v=Xi2aZH3JKh0&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=5\r\n" + //
+                        "STRAIGHT JET - 154 BPM https://www.youtube.com/watch?v=2oK45vJ3Jq4&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=1\r\n" + //
+                        "あくあ色ぱれっと【ホロライブ/湊あくあ】- 156 BPM https://www.youtube.com/watch?v=6bnaBnd4kyU&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=2\r\n" + //
+                        "【Ado】阿修羅ちゃん (Ashura-chan) - 156 BPM https://www.youtube.com/watch?v=cyq5-StPISU&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=4\r\n" + //
+                        "HimeHina - RettouJoutou - 160 BPM https://www.youtube.com/watch?v=il4cAeVzZwI&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=31\r\n" + //
+                        "JAM PROJECT - SKILL - 166 BPM https://www.youtube.com/watch?v=Pfwd1i2V94M&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=6\r\n" + //
+                        "YOASOBI - Idol - Cover【Kotoka Torahime | NIJISANJI EN】 - 166 BPM https://www.youtube.com/watch?v=WW8Mci3xoMU&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=7\r\n" + //
+                        "MYGO 影色舞 Silhouette dance - 166 BPM https://www.youtube.com/watch?v=5_ZWx7Q26Tw&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=10\r\n" + //
+                        "【オモイヨシノ】恋詠桜 - 168 BPM https://www.youtube.com/watch?v=XOycZd2qWFw&list=PLdtB9hTrVDD57aw6mYN61pWkHzwyS5SwN&index=9");
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
+    }
+
+    public static void removelink(String link){
+        StringBuilder a = new StringBuilder();
+        int i; 
+        a.append(link.substring(0,i = link.indexOf("https://")));
+        int e = link.indexOf("index",i);
+        while((i = link.indexOf("https://",i+1)) >= 0){
+            a.append(link.substring(e,i)); 
+            a.append("\n");
+            e = link.indexOf("index",i+1);
+            i++;
+        }
+        System.out.println(a.toString());
     }
 
     public static void printMaidButton(){
