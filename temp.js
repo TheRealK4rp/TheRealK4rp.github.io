@@ -64,12 +64,13 @@ function changeS(shift){
         if(shift == "asa"){
                 addAndRemoveMana('asa');
                 for(let i = 0;i < 168;i++){
-                        if(i==136) {
+                        /* i is correct ,this is fror hyper3
+                        if(i==80) {
                                 addImgAndName("temp"+i,"hyper2.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
                                 document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-2','mywindow');}
                                 continue;
-                        }
+                        }*/
                         if(asa[i] == null || i > 136){
                                 makeNULL('temp'+i);
                         }
@@ -81,15 +82,11 @@ function changeS(shift){
         else{
                 addAndRemoveMana('yoru');
                 for(let i = 0;i < 168;i++){
-                        if(yoru[i] == null || i > 140 || i == 45 || i == 46 || i == 47){
+                        if(yoru[i] == null || i > 140){
                                 makeNULL('temp'+i)
                         }
                         else{
-                                addImgAndName("temp"+i,yoru[i],"maids/") 
-                                if(i == 44){
-                                        resizeI("temp"+i,'180px','180px');
-                                        document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/return-to-wonderland-akis-unbirthday-party','mywindow');}
-                                }                              
+                                addImgAndName("temp"+i,yoru[i],"maids/")                        
                         }
                 }
         }

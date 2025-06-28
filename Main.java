@@ -11,10 +11,12 @@ public class Main{
 
         //printEvent();
         //printMaidButton();
-        printHTML(); 
+        //printHTML(); 
         //printcomma();
 
-        //replaceLines(); 
+        replaceLines(); 
+        //replaceLinesTemp(); 
+
         //removelink(link);
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
@@ -203,6 +205,31 @@ public class Main{
             file.close();
             // write the new string with the replaced line OVER the same file
             OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("index.js"),StandardCharsets.UTF_8));
+            fileOut.write(inputBuffer.toString());
+            fileOut.close();
+    
+        } catch (Exception e) {
+            System.out.println("Problem reading file.");
+        }
+    }
+    public static void replaceLinesTemp() {
+        try {
+            // input the (modified) file content to the StringBuffer "input"
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("temp.js"),"UTF-8"));
+            StringBuffer inputBuffer = new StringBuffer();
+            String line;
+            int i = 0;
+            while ((line = file.readLine()) != null) {
+                switch(i){
+                    case 0 -> {line = printAsa(); i++;}
+                    case 1 -> {line = printYoru(); i++;}
+                }
+                inputBuffer.append(line);
+                inputBuffer.append('\n');
+            }
+            file.close();
+            // write the new string with the replaced line OVER the same file
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("temp.js"),StandardCharsets.UTF_8));
             fileOut.write(inputBuffer.toString());
             fileOut.close();
     
