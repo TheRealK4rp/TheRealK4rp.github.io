@@ -11,10 +11,10 @@ public class Main{
 
         //printEvent();
         //printMaidButton();
-        //printHTML(); 
+        printHTML(); 
         //printcomma();
 
-        replaceLines(); 
+        //replaceLines(); 
         //removelink(link);
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
@@ -41,20 +41,20 @@ public class Main{
 
     public static void printHTML(){
         int day = 1;
-        for(int i = 0; i<168;i++){
+        for(int i = 0; i<140;i++){
             if(i%4==0){
                 if(day == -1){ System.out.println("</div>\n<div id = 'special'>");}
                 else System.out.println("</div>\n<div>");
-                if(i/4 >=6 && day <=30){
+                if(i/4 >=1 && day <=31){
                     System.out.println(day);
                     day++;
                 }
             }
 
-            if(i%4==0 && day%7!=3 && i > 23 && i < 144){
+            if(i%4==0 && day%7!=1 && i < 128){
                 System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
             }
-            else if(i%4==1 && day%7!=3 && day%7 != 4 && day%7 != 5 && i > 32 && i <144) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else if(i%4==1 && day%7!=1 && day%7 != 2 && day %7 != 3 && i <128) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
             else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
             /* 
             if(i==75){
