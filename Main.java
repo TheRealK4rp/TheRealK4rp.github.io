@@ -78,10 +78,10 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,,,,,,,,,,,,,,,,,,,,,");
+            output.append("var asa = [,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if((i+6) % 7 == 0 || (i+4) % 7 == 0 || (i+5) % 7 == 0) line = ",,";
+                if(((i-1) % 7 == 0 || (i+0) % 7 == 0 || (i+1) % 7 == 0 || i >= 31 ) && i != 6) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -140,14 +140,14 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,,,,,");
+            output.append("var yoru = [,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if ((i+6)%7==0 || i == 10) {
+                if (((i+1)%7==0 || i >= 31 )&& i != 6) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
-                    if((i+0)%7 == 0 || (i+1)%7 == 0 || (i+2) % 7 == 0)
+                    if(((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0))
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -160,7 +160,7 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
-                            if(!((i+1)%7 == 0 || (i+2)%7 == 0 || (i+0) % 7 == 0)){ 
+                            if(!((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0)){ 
                                 d--;
                                 f=true;
                             }
