@@ -160,14 +160,13 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
-                            if(!((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0)){ 
+                            if(!(((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0) || i == 1 || i == 6)){ 
                                 d--;
                                 f=true;
                             }
                             for(int c = 0; c < d; c++){
                                 line+=",\"null2.png\"";
                             }
-                            
                             line+=(f)?",,":",";
                             break;
                         }
