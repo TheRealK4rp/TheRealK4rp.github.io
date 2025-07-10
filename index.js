@@ -64,14 +64,13 @@ function changeS(shift){
         if(shift == "asa"){
                 addAndRemoveMana('asa');
                 for(let i = 0;i < 140;i++){
-                        /* i is correct ,this is fror hyper3
                         if(i==80) {
-                                addImgAndName("temp"+i,"hyper2.png","other/")   
+                                addImgAndName("temp"+i,"hyper3.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
                                 document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-2','mywindow');}
                                 continue;
-                        }*/
-                        if(asa[i] == null || i > 136){
+                        }
+                        if(asa[i] == null || i > 136 || i == 81 || i == 82 || i == 83){
                                 makeNULL('temp'+i);
                         }
                         else{
