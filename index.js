@@ -67,7 +67,7 @@ function changeS(shift){
                         if(i==80) {
                                 addImgAndName("temp"+i,"hyper3.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
-                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-2','mywindow');}
+                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-3','mywindow');}
                                 continue;
                         }
                         if(asa[i] == null || i > 136 || i == 81 || i == 82 || i == 83){
