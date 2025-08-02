@@ -47,16 +47,16 @@ public class Main{
             if(i%4==0){
                 if(day == -1){ System.out.println("</div>\n<div id = 'special'>");}
                 else System.out.println("</div>\n<div>");
-                if(i/4 >=1 && day <=31){
+                if(i/4 >=4 && day <=31){
                     System.out.println(day);
                     day++;
                 }
             }
 
-            if(i%4==0 && day%7!=1 && i < 128){
+            if(i%4==0 && day%7!=5 && i < 128){
                 System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana'></div>");
             }
-            else if(i%4==1 && day%7!=1 && day%7 != 2 && day %7 != 3 && i <128) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
+            else if(i%4==1 && day%7!=5 && day%7 != 6 && day %7 != 0 && i <128) System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"><img class = 'mana2'></div>");
             else System.out.println("\t<div id = temp"+i+"-2><span id = temp"+i+ "-1></span><img id = temp"+i+"></div>");
             /* 
             if(i==75){
@@ -78,10 +78,10 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,");
+            output.append("var asa = [,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i-1) % 7 == 0 || (i+0) % 7 == 0 || (i+1) % 7 == 0 || i >= 31 ) && i != 6) line = ",,";
+                if(((i+3) % 7 == 0 || (i+4) % 7 == 0 || (i+2) % 7 == 0 || i >= 31 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -140,14 +140,14 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,");
+            output.append("var yoru = [,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+1)%7==0 || i >= 31 )&& i != 6) {
+                if (((i+4)%7==0 || i >= 31 )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
-                    if(((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0))
+                    if(((i+6)%7 == 0 || (i+0)%7 == 0 || (i+5) % 7 == 0))
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -160,7 +160,7 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
-                            if(!(((i+3)%7 == 0 || (i+4)%7 == 0 || (i+2) % 7 == 0) || i == 1 || i == 6)){ 
+                            if(!(((i+6)%7 == 0 || (i+5)%7 == 0 || (i+0) % 7 == 0) || i == 1 || i == 6)){ 
                                 d--;
                                 f=true;
                             }
