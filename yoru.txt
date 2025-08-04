@@ -1,6 +1,6 @@
 Sumi Mitsu Latte Nico
 Riri Reyna Nyan Saiki
-Jia Riri Mitsu Rose
+Dolly Riri Mitsu Rose
 
 Mitsu Poyo Moon
 Sumi
@@ -13,14 +13,14 @@ Sumi Sakurin
 Sae Riri Rose
 Sae Rose Berry
 Sumi Poyo Latte
-Reyna
-Sae Nico
+Reyna Dolly
+Sae Nico Dolly
 
 Jia
 
 Mikan
 Mitsu Latte Berry
-Jia Moon
+Jia Moon Dolly
 Mitsu Riri
 
 Poyo
@@ -28,7 +28,7 @@ Rose
 Mitsu
 Sakurin Latte
 Sakurin Nico Moon
-Nico
+Dolly Nico
 
 
 
