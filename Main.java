@@ -26,7 +26,7 @@ public class Main{
         StringBuilder a = new StringBuilder();
         int i; 
         a.append(link.substring(0,i = link.indexOf("https://")));
-        int e = link.indexOf("index",i);
+        int e = link.indexOf("index",i); 
         while((i = link.indexOf("https://",i)) >= 0){
             a.append(link.substring(e,i)); 
             a.append("\n");
