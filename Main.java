@@ -14,6 +14,8 @@ public class Main{
         //printHTML(); 
         //printcomma();
 
+        //makeCalendar();
+
         replaceLines(); 
         //replaceLinesTemp(); 
 
@@ -62,6 +64,79 @@ public class Main{
             if(i==75){
                 printEvent();
             }*/
+        }
+    }
+    //Mon == 0, etc
+    public static String printHTML2(int firstDay, int days){
+        int htmldays = (days+firstDay) * 4;
+        int monday = 0;
+        switch(firstDay){
+            case 0 -> {monday = 2;}
+            case 1 -> {monday = 1;}
+            case 2 -> {monday = 0;}
+            case 3 -> {monday = 6;}
+            case 4 -> {monday = 5;}
+            case 5 -> {monday = 4;}
+            case 6 -> {monday = 3;}
+        }
+        int tuesday = (monday+1) % 7;
+        int wednesday = (monday+2) % 7;
+        StringBuilder out = new StringBuilder();
+        int day = 1;
+        for(int i = 0; i<140;i++){
+            if(i%4==0){
+                if(day == -1){ out.append("</div>\n<div id = 'special'>\n");}
+                else out.append("</div>\n<div>\n");
+                if(i/4 >=firstDay && day <=days){
+                    out.append(day);
+                    out.append("\n");
+                    day++;
+                }
+            }
+
+            if(i%4==0 && day%7!=monday && i < htmldays && day >= 2){
+                out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("><img class = 'mana'></div>\n");
+            }
+            else if(i%4==1 && day%7!=monday && day%7 != tuesday && day %7 != wednesday && i <htmldays && day >=2) out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("><img class = 'mana2'></div>\n");
+            else out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("></div>\n");
+            /* 
+            if(i==75){
+                printEvent();
+            }*/
+        }
+        return out.toString();
+    }
+
+    public static void makeCalendar(){
+        try {
+            Scanner s = new Scanner(System.in);
+            System.out.println("Enter first day of the week:\nMonday = 0\nTuesday = 1\nWednesday = 2\nThursday = 3\nFriday = 4\nSaturday = 5\nSunday = 6");
+            int num = s.nextInt() % 7;
+            System.out.println("Enter number of days in the month.");
+            int days = s.nextInt();
+            s.close();
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.html"),"UTF-8"));
+            StringBuffer inputBuffer = new StringBuffer();
+            String line;
+            int i = 0;
+            while ((line = file.readLine()) != null) {
+                switch(i){
+                    case 77 -> {line = printHTML2(num,days);line = line.substring(6); i++;}
+                    case 79 -> {line = "</div>\n</div>\n    <div>Missing: i dont feel like going through the list lol</div>\n</body>\n</html>";}
+                }
+                inputBuffer.append(line);
+                inputBuffer.append('\n');
+                i++;
+                if(i==80) break;
+            }
+            file.close();
+            // write the new string with the replaced line OVER the same file
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("test.html"),StandardCharsets.UTF_8));
+            fileOut.write(inputBuffer.toString());
+            fileOut.close();
+    
+        } catch (Exception e) {
+            System.out.println("Problem reading file.");
         }
     }
 
