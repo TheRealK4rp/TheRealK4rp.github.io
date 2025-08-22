@@ -155,7 +155,7 @@ public class Main{
             output.append("var asa = [,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+3) % 7 == 0 || (i+4) % 7 == 0 || (i+2) % 7 == 0 || i >= 31 ) ) line = ",,";
+                if(((i+3) % 7 == 0 || (i+4) % 7 == 0 || (i+2) % 7 == 0 || i > 31 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
