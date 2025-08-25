@@ -64,7 +64,12 @@ function changeS(shift){
         if(shift == "asa"){
                 addAndRemoveMana('asa');
                 for(let i = 0;i < 140;i++){
-                        if(asa[i] == null || i >140){
+                        if(i == 108){
+                                addImgAndName("temp"+i,"hyper4.png","other/")   
+                                resizeI("temp"+i,'180px','180px');
+                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-1','mywindow');}
+                        }
+                        else if(asa[i] == null || i == 109 || i == 110 || i == 111|| i >140){
                                 makeNULL('temp'+i);
                         }
                         else{
@@ -75,7 +80,12 @@ function changeS(shift){
         else{
                 addAndRemoveMana('yoru');
                 for(let i = 0;i < 140;i++){
-                        if(yoru[i] == null || i > 140){
+                        if(i == 128){
+                                addImgAndName("temp"+i,"hyper4.png","other/")   
+                                resizeI("temp"+i,'180px','180px');
+                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-1','mywindow');}
+                        }
+                        else if(yoru[i] == null || i == 129 || i == 130 || i == 131 || i > 140){
                                 makeNULL('temp'+i)
                         }
                         else{
