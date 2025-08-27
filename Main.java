@@ -13,6 +13,7 @@ public class Main{
         //printMaidButton();
         //printHTML(); 
         //printcomma();
+        
         //makeCalendar();
 
         replaceLines(); 
@@ -93,10 +94,10 @@ public class Main{
                 }
             }
 
-            if(i%4==0 && day%7!=monday && i < htmldays && day >= 2){
+            if(i%4==0 && day%7!=monday && i <= htmldays && day >= 2){
                 out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("><img class = 'mana'></div>\n");
             }
-            else if(i%4==1 && day%7!=monday && day%7 != tuesday && day %7 != wednesday && i <htmldays && day >=2) out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("><img class = 'mana2'></div>\n");
+            else if(i%4==1 && day%7!=monday && day%7 != tuesday && day %7 != wednesday && i <=htmldays && day >=2) out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("><img class = 'mana2'></div>\n");
             else out.append("\t<div id = temp").append(i).append("-2><span id = temp").append(i).append("-1></span><img id = temp").append(i).append("></div>\n");
             /* 
             if(i==75){
