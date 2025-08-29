@@ -67,7 +67,7 @@ function changeS(shift){
                         if(i == 108){
                                 addImgAndName("temp"+i,"hyper4.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
-                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-1','mywindow');}
+                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-4','mywindow');}
                         }
                         else if(asa[i] == null || i == 109 || i == 110 || i == 111|| i >140){
                                 makeNULL('temp'+i);
