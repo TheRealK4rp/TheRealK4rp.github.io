@@ -81,9 +81,9 @@ function changeS(shift){
                 addAndRemoveMana('yoru');
                 for(let i = 0;i < 140;i++){
                         if(i == 128){
-                                addImgAndName("temp"+i,"hyper4.png","other/")   
+                                addImgAndName("temp"+i,"festival.png","other/")   
                                 resizeI("temp"+i,'180px','180px');
-                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/hyperstellar-vol-1','mywindow');}
+                                document.getElementById('temp'+i+"-2").onclick = function() {window.open('https://www.asayorumaidcafe.com/event-details/ai-tanabata-festival-at-asayoru','mywindow');}
                         }
                         else if(yoru[i] == null || i == 129 || i == 130 || i == 131 || i > 140){
                                 makeNULL('temp'+i)

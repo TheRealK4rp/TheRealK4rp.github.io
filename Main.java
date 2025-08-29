@@ -148,6 +148,9 @@ public class Main{
     }
 
     public static String printAsa(){
+        int dayOne = 2; // change this
+        int dayTwo = (dayOne+1) % 7;
+        int dayThree = (dayTwo+1) % 7;
         try{
             File file = new File("asa.txt");
             FileInputStream in = new FileInputStream(file);
@@ -156,7 +159,7 @@ public class Main{
             output.append("var asa = [,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+3) % 7 == 0 || (i+4) % 7 == 0 || (i+2) % 7 == 0 || i > 31 ) ) line = ",,";
+                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 31 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -210,6 +213,9 @@ public class Main{
     }*/
 
     public static String printYoru(){
+        int dayOne = 5; // change this
+        int dayTwo = (dayOne+1) % 7;
+        int dayThree = (dayTwo+1) % 7;
         try{
             File file = new File("yoru.txt");
             FileInputStream in = new FileInputStream(file);
@@ -222,7 +228,7 @@ public class Main{
                     line = ",,,,";
                 }
                 else if(line.equals("")){
-                    if(((i+6)%7 == 0 || (i+0)%7 == 0 || (i+5) % 7 == 0))
+                    if(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0))
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",";
                     else    
                         line = "\"null2.png\",\"null2.png\",\"null2.png\",,";
@@ -236,7 +242,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+6)%7 == 0 || (i+5)%7 == 0 || (i+0) % 7 == 0) || i == 1 ||  i == 12 || i == 26)){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) || i == 1 ||  i == 12 || i == 26)){ 
                                 d--;
                                 f=true;
                             }
