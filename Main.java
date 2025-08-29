@@ -14,9 +14,9 @@ public class Main{
         //printHTML(); 
         //printcomma();
         
-        //makeCalendar();
+        makeCalendar();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -148,7 +148,7 @@ public class Main{
     }
 
     public static String printAsa(){
-        int dayOne = 2; // change this
+        int dayOne = 2; // change this dayThree is Monday
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -213,7 +213,7 @@ public class Main{
     }*/
 
     public static String printYoru(){
-        int dayOne = 5; // change this
+        int dayOne = 5; // change this (dayOne-1 is monday)
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -224,7 +224,7 @@ public class Main{
             output.append("var yoru = [,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+4)%7==0 || i >= 31 )) {
+                if (((i+dayOne-1)%7==0 || i >= 31 )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
