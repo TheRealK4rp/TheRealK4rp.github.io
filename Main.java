@@ -235,6 +235,7 @@ public class Main{
                             line+=".jpg\"";
                             int d = 4-b-1;
                             boolean f = false;
+                            //day - 1 to add one
                             if(!(((i+6)%7 == 0 || (i+5)%7 == 0 || (i+0) % 7 == 0) || i == 1 ||  i == 12 || i == 26)){ 
                                 d--;
                                 f=true;
