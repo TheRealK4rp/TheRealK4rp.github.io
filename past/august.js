@@ -109,7 +109,7 @@ function addImgAndName(id,img,file){
         document.getElementById(id).style.visibility = "visible"
         document.getElementById(id+"-2").style = 'cursor:pointer;'
         document.getElementById(id+"-1").style.display = "inherit";
-        document.getElementById(id).src=file+img;
+        document.getElementById(id).src="/"+file+img;
         resize(id)
         if(img != "null2.png" && img != 'bny.png'){
                 var t = img.charAt(0).toUpperCase();

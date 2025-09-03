@@ -14,9 +14,9 @@ public class Main{
         //printHTML(); 
         //printcomma();
         
-        makeCalendar();
+        //makeCalendar();
 
-        //replaceLines(); 
+        replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -148,7 +148,7 @@ public class Main{
     }
 
     public static String printAsa(){
-        int dayOne = 2; // change this dayThree is Monday
+        int dayOne = 5; // change this dayThree is Monday
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -156,10 +156,10 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,,,,,,,,,,,,,");
+            output.append("var asa = [");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 31 ) ) line = ",,";
+                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 30 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -213,7 +213,7 @@ public class Main{
     }*/
 
     public static String printYoru(){
-        int dayOne = 5; // change this (dayOne-1 is monday)
+        int dayOne = 1; // change this (dayOne-1 is monday)
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -221,10 +221,10 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,,,,,,,,,,,,,");
+            output.append("var yoru = [");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+dayOne-1)%7==0 || i >= 31 )) {
+                if (((i+dayOne-1)%7==0 || i >= 30 )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
@@ -242,7 +242,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) || i == 1 ||  i == 12 || i == 26)){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) )){ 
                                 d--;
                                 f=true;
                             }
