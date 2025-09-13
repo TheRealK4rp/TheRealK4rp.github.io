@@ -161,6 +161,14 @@ public class Main{
                 String line = s.nextLine().toLowerCase().trim();
                 if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 30 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
+                else if(i == 12){
+                    int a = line.indexOf(" ");
+                    int b = line.indexOf(" ",a+1);
+                    line = "\""+line.substring(0,a) + ".jpg\",\"" + line.substring(a+1,b)+".jpg\",\"" + line.substring(b+1)+".jpg\",";
+                    output.append(",");
+                    output.append(line);
+                    continue;
+                }
                 else{
                     int a = line.indexOf(" ");
                     if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
