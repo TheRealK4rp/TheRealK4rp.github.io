@@ -1,5 +1,5 @@
-var asa = [,,,,,,,,,,,,,"mitsu.jpg","moon.jpg",,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"null2.png","null2.png",,,"sakurin.jpg","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"sakurin.jpg","null2.png",,,"moon.jpg","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,,,,]
-var yoru = [,,,,"soul.jpg","ai.jpg","null2.png",,"riri.jpg","sakurin.jpg","ai.jpg",,"sumi.jpg","saiki.jpg","null2.png",,"sakurin.jpg","mitsu.jpg","sumi.jpg","abso.jpg","null2.png","null2.png","null2.png","null2.png","nico.jpg","null2.png","null2.png","null2.png",,,,,"null2.png","null2.png","null2.png",,"riri.jpg","sae.jpg","sumi.jpg","riri.jpg",,"latte.jpg","dolly.jpg","null2.png",,"sumi.jpg","moon.jpg","ai.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","sakurin.jpg","null2.png","null2.png","null2.png",,,,,"ai.jpg","mikan.jpg","null2.png",,"riri.jpg","mitsu.jpg","soul.jpg","null2.png","mitsu.jpg","sumi.jpg","dolly.jpg",,"ai.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","mitsu.jpg","null2.png","null2.png","null2.png",,,,,"latte.jpg","ai.jpg","null2.png",,"sae.jpg","sumi.jpg","dolly.jpg","null2.png","dolly.jpg","soul.jpg","saiki.jpg",,"mikan.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","mitsu.jpg","nico.jpg","null2.png","null2.png",,,,,"sae.jpg","sakurin.jpg","ai.jpg","riri.jpg",,,,,,,,,,]
+var asa = [,,,,,,,,,,,,,"mikan.jpg","null2.png",,,"mitsu.jpg","moon.jpg",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"sakurin.jpg","abso.jpg",,,"null2.png","null2.png",,,"sakurin.jpg","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"dolly.jpg","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"abso.jpg","null2.png",,,"sakurin.jpg","null2.png",,,"moon.jpg","null2.png",,,"null2.png","null2.png",,,,,,,,,,,,,,,"sakurin.jpg","null2.png",,,,,,]
+var yoru = [,,,,"sae.jpg","saiki.jpg","aoi.jpg",,"soul.jpg","ai.jpg","null2.png",,"riri.jpg","sakurin.jpg","ai.jpg",,"sumi.jpg","saiki.jpg","null2.png","null2.png","sakurin.jpg","mitsu.jpg","sumi.jpg","abso.jpg","null2.png","null2.png","null2.png","null2.png",,,,,"sumi.jpg","dolly.jpg","riri.jpg","saiki.jpg","null2.png","null2.png","null2.png",,"riri.jpg","sae.jpg","sumi.jpg","riri.jpg","latte.jpg","dolly.jpg","null2.png","null2.png","sumi.jpg","moon.jpg","ai.jpg","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"sumi.jpg","abso.jpg","null2.png",,"ai.jpg","mikan.jpg","null2.png",,"riri.jpg","mitsu.jpg","soul.jpg",,"mitsu.jpg","sumi.jpg","dolly.jpg","null2.png","ai.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"riri.jpg","moon.jpg","saiki.jpg",,"latte.jpg","ai.jpg","null2.png",,"sae.jpg","sumi.jpg","dolly.jpg",,"dolly.jpg","soul.jpg","saiki.jpg","null2.png","mikan.jpg","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png","null2.png",,,,,"riri.jpg","dolly.jpg","null2.png",,"sae.jpg","sakurin.jpg","ai.jpg","riri.jpg",,,,,,,,,,]
 var insta = ["maid_aikichune","maid_aki_","maid_aoi","sweetly__berry","matadollyy","maidjia","latte_maid","maid.mahou","wan.wan.mari","maid.melly","maid_mitsu","moemoe.moon","nicotheunbridled","maid_niya","maidnyan","maid.poyo","otohimehaato","ririmaid","bytesizeangel","dfmsae","maid_saiki","sakurin_maid","moomookyun","maid_sumi","toki.etc_","yuna.maid"]
 const instaL = new Map([['abso', 'maid.abso'],['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['lulu', 'maidlulu'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mikan', 'maid.mikan'],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
 const event1 = ["sae.jpg","latte.jpg","nyan.jpg","ai.jpg","aki.jpg","reyna.jpg","moon.jpg","rose.jpg","null2.png","null2.png","bny.png"]
@@ -63,7 +63,7 @@ function changeS(shift){
 
         if(shift == "asa"){
                 addAndRemoveMana('asa');
-                for(let i = 0;i < 140;i++){
+                for(let i = 0;i < 168;i++){
                         if(asa[i] == null || i >140){
                                 makeNULL('temp'+i);
                         }
@@ -74,8 +74,8 @@ function changeS(shift){
         }
         else{
                 addAndRemoveMana('yoru');
-                for(let i = 0;i < 140;i++){
-                        if(yoru[i] == null || i > 140){
+                for(let i = 0;i < 168;i++){
+                        if(yoru[i] == null || i > 168){
                                 makeNULL('temp'+i)
                         }
                         else{
