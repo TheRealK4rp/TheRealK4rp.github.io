@@ -8,7 +8,7 @@ Reyna Berry
 
 Nico Aki
 Sakurin Abso
-
+Riri
 Sakurin
 
 
@@ -21,9 +21,9 @@ Dolly
 
 
 Nico Mikan
-Abso
+null2 Abso
 Sakurin
-Moon
+null2 Moon
 
 
 
