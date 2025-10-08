@@ -1,10 +1,11 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main{
 
-    public static String[] maids = {"ai","aki","aoi","berry","dolly","jia","latte","mahou","mari","melly","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
+    public static String[] maids = {"abso","ai","aki","aoi","berry","dolly","jia","latte","lulu","mahou","mari","melly","mikan","mitsu","moon","nico","niya","nyan","poyo","reyna","riri","rose","sae","saiki","sakurin","soul","sumi","toki","yuna"};
     public static void main(String[] args) {
         //printAsa();
         //printYoru();
@@ -15,6 +16,8 @@ public class Main{
         //printcomma();
         
         //makeCalendar();
+
+        //printMissing();
 
         replaceLines(); 
         //replaceLinesTemp(); 
@@ -355,6 +358,30 @@ public class Main{
                 System.out.print("\"null2.png\",\"null2.png\",\"null2.png\",\"null2.png\",");
             else    
                 System.out.print("\"null2.png\",\"null2.png\",\"null2.png\",,");
+        }
+    }
+
+    public static void printMissing(){
+        String[] maidos = Arrays.copyOf(maids,maids.length);
+        try{
+            File file = new File("yoru.txt");
+            FileInputStream in = new FileInputStream(file);
+            Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            for(int i = 0;i<32;i++){
+                String line = s.nextLine().toLowerCase().trim();
+                if(line.equals("")) continue;
+                for(i = 0; i < maidos.length; i++){
+                    if(maidos[i] != null && line.indexOf(maidos[i]) >= 0) maidos[i] = null;
+                }
+            }
+            s.close();
+            for(int i = 0; i < maidos.length; i++){
+                if((maidos[i]) != null) System.out.println(maidos[i]);
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
     }
 
