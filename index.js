@@ -63,7 +63,7 @@ function changeS(shift){
 
         if(shift == "asa"){
                 addAndRemoveMana('asa');
-                for(let i = 0;i < 168;i++){
+                for(let i = 0;i < 140;i++){
                         if(asa[i] == null || i >140){
                                 makeNULL('temp'+i);
                         }
@@ -74,8 +74,8 @@ function changeS(shift){
         }
         else{
                 addAndRemoveMana('yoru');
-                for(let i = 0;i < 168;i++){
-                        if(yoru[i] == null || i > 168){
+                for(let i = 0;i < 140;i++){
+                        if(yoru[i] == null || i > 140){
                                 makeNULL('temp'+i)
                         }
                         else{
