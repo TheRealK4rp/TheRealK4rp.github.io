@@ -17,9 +17,9 @@ public class Main{
         
         //makeCalendar();
 
-        //printMissing();
+        printMissing();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -368,6 +368,17 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
+            for(int i = 0;i<32;i++){
+                String line = s.nextLine().toLowerCase().trim();
+                if(line.equals("")) continue;
+                for(i = 0; i < maidos.length; i++){
+                    if(maidos[i] != null && line.indexOf(maidos[i]) >= 0) maidos[i] = null;
+                }
+            }
+            s.close();
+            file = new File("asa.txt");
+            in = new FileInputStream(file);
+            s = new Scanner(in);
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
                 if(line.equals("")) continue;
