@@ -11,12 +11,12 @@ Riri Sae Sumi Berry
 null2 Latte Dolly
 Sumi Moon Ai Poyo
 
-Sakurin Melly
+null2 Melly
 Sae Sumi Poyo Moon
 Poyo Ai Mikan
 Riri Mitsu Soul
 Mitsu Sumi Dolly Poyo
-Poyo Ai Abso
+Poyo Ai Abso Sakurin
 
 Mitsu Melly
 Riri Moon Saiki
@@ -28,5 +28,5 @@ Poyo Mikan Abso
 Mitsu Nico
 Riri Dolly
 Sae Sakurin Ai Riri
-
+null2 null2 null2 null2
 
