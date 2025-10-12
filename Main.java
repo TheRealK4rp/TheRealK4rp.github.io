@@ -17,9 +17,9 @@ public class Main{
         
         //makeCalendar();
 
-        //printMissing();
+        printMissing();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
