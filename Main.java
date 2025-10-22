@@ -1,7 +1,7 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main{
 
@@ -253,7 +253,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) || i == 7 || i == 29 || i == 14) ){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) || i == 7 || i == 29 || i == 14 || i == 21) ){ 
                                 d--;
                                 f=true;
                             }
