@@ -33,6 +33,7 @@ video{
 }
 
 .calendar{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(7, 200px);
     grid-template-rows: repeat(6, 238px);
@@ -80,6 +81,18 @@ span{
 
 .special{
     order: 0;
+}
+
+.overlap1{
+    position: relative;
+}
+.event{
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+    width: 500px;
+    height: 500px;
+    background-color: #030303;
 }
 
 
