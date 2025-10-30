@@ -162,7 +162,7 @@ public class Main{
             output.append("var asa = [,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 30 ) ) line = ",,";
+                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 29 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else if(i == 12 || i == 13){
                     int a = line.indexOf(" ");
@@ -235,7 +235,7 @@ public class Main{
             output.append("var yoru = [,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+dayOne-1)%7==0 || i >= 31 )) {
+                if (((i+dayOne-1)%7==0 || i >= 30 )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
