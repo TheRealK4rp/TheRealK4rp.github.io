@@ -15,11 +15,11 @@ public class Main{
         //printHTML(); 
         //printcomma();
         
-        makeCalendar();
+        //makeCalendar();
 
         //printMissing();
 
-        //replaceLines(); 
+        replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -151,7 +151,7 @@ public class Main{
     }
 
     public static String printAsa(){
-        int dayOne = 7; // change this dayThree is Monday
+        int dayOne = 3; // change this dayThree is Monday
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -159,19 +159,11 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,,,,,");
+            output.append("var asa = [,,,,,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 29 ) ) line = ",,";
+                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 30 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
-                else if(i == 12 || i == 13){
-                    int a = line.indexOf(" ");
-                    int b = line.indexOf(" ",a+1);
-                    line = "\""+line.substring(0,a) + ".jpg\",\"" + line.substring(a+1,b)+".jpg\",\"" + line.substring(b+1)+".jpg\",";
-                    output.append(",");
-                    output.append(line);
-                    continue;
-                }
                 else{
                     int a = line.indexOf(" ");
                     if(a<0) line = "\""+line + ".jpg\",\"null2.png\",";
@@ -224,7 +216,7 @@ public class Main{
     }*/
 
     public static String printYoru(){
-        int dayOne = 3; // change this (dayOne-1 is monday)
+        int dayOne = 6; // change this (dayOne-1 is monday)
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -232,7 +224,7 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,,,,,");
+            output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
                 if (((i+dayOne-1)%7==0 || i >= 30 )) {
@@ -253,7 +245,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) || i == 7 || i == 29 || i == 14 || i == 21) ){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) ){ 
                                 d--;
                                 f=true;
                             }
