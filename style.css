@@ -89,10 +89,23 @@ span{
 .event{
     position: absolute;
     visibility: hidden;
-    z-index: 2;
-    width: 500px;
-    height: 500px;
-    background-color: #030303;
+    z-index: 10;
+    font-size: 50px;
+    background-color: #ed0000;
+}
+
+.event > div{
+    display:grid;
+    grid-template-rows: repeat(2 , 135px);
+    grid-template-columns: repeat(9, 150px);
+    width: 1400px;
+    border: 1px;
+}
+
+.event > div img{
+    width: 130px;
+    height: 130px;
+    position: relative;
 }
 
 
@@ -113,7 +126,7 @@ span{
     height: 30px !important;
     position: absolute !important;
     content: url('other/m.png');
-    z-index:100;
+    z-index:5;
 }
 
 .mana2{
@@ -123,7 +136,7 @@ span{
     height: 30px !important;
     position: absolute !important;
     content: url('other/m.png');
-    z-index:100;
+    z-index:5;
 }
 
 .eventnum1{
