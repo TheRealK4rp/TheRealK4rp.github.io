@@ -15,11 +15,11 @@ public class Main{
         //printHTML(); 
         //printcomma();
         
-        //makeCalendar();
+        makeCalendar();
 
         //printMissing();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -118,19 +118,19 @@ public class Main{
             System.out.println("Enter number of days in the month.");
             int days = s.nextInt();
             s.close();
-            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.html"),"UTF-8"));
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("october.html"),"UTF-8"));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             int i = 0;
             while ((line = file.readLine()) != null) {
                 switch(i){
-                    case 77 -> {line = printHTML2(num,days);line = line.substring(6); i++;}
-                    case 79 -> {line = "</div>\n</div>\n    <div>Missing: i dont feel like going through the list lol</div>\n</body>\n</html>";}
+                    case 88 -> {line = printHTML2(num,days);line = line.substring(6); i++;}
+                    case 90 -> {line = "</div>\n</div>\n    <div>Missing: i dont feel like going through the list lol</div>\n</body>\n</html>";}
                 }
                 inputBuffer.append(line);
                 inputBuffer.append('\n');
                 i++;
-                if(i==80) break;
+                if(i==91) break;
             }
             file.close();
             // write the new string with the replaced line OVER the same file
