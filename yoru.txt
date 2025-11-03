@@ -12,7 +12,7 @@ Nico
 Soul
 
 null2 Rose
-null2 Soul
+Mitsu Soul
 Poyo Rose
 
 Poyo
@@ -20,13 +20,13 @@ Soul
 Poyo Rose
 
 null2 Sumi Soul
-null2 Sumi
+null2 Sumi Mitsu
 
 
 
 Nico
 null2 Poyo
-Sumi Nico
+Sumi Nico Mitsu
 null2 Poyo
 
 
