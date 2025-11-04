@@ -2,15 +2,15 @@ Riri Latte Sumi Soul
 Sumi Soul Dolly Abso
 
 Sumi
-null2 Rose Soul
+Melly Rose Soul
 Nico
-
+Melly
 null2 Sumi
 
 
 Nico
 Soul
-
+Melly
 null2 Rose
 Mitsu Soul
 Poyo Rose
@@ -18,12 +18,12 @@ Poyo Rose
 Poyo
 Soul
 Poyo Rose
-
+Melly
 null2 Sumi Soul
-null2 Sumi Mitsu
+null2 Sumi Mitsu Melly
 
 
-
+Melly
 Nico
 null2 Poyo
 Sumi Nico Mitsu
