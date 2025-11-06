@@ -1,11 +1,11 @@
 Mitsu Lulu
-
+Reyna
 
 
 
 Sakurin
 Sumi
-
+Reyna
 Mitsu
 
 
@@ -13,18 +13,23 @@ Mitsu
 Nico
 Sakurin
 
+<<<<<<< HEAD
 Sakurin
+=======
+Reyna
+
+>>>>>>> 5665f03822d0072ad6acc6c209d86ea2230ee87f
 
 
 
 
 Nico
-
+Reyna
 Nico
 
 
 
-
+Reyna
 Sumi
 Sakurin
 
