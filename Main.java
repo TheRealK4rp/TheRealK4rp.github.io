@@ -246,7 +246,6 @@ public class Main{
                             boolean f = false;
                             //day - 1 to add one
                             if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) && i != 4){ 
-                                System.out.println(i);
                                 d--;
                                 f=true;
                             }
