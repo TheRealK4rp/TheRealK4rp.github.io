@@ -5,25 +5,25 @@ Toki Sakurin Yuna
 Sumi Melly Rose Soul
 Nico Latte
 Melly
-null2 Sumi
+null2 Sumi Moon
 Reyna Sae
 
-Nico
+Nico Moon
 Soul
 Melly
 Sae Rose
-Mitsu Soul
+Mitsu Soul Moon
 Poyo Rose
 
 Poyo
 Soul
 Poyo Rose
-Melly Latte
+Melly Latte Moon
 Sae Sumi Soul
 null2 Sumi Mitsu Melly
 
 Reyna
-Melly Latte
+Melly Latte Moon
 Nico Sae
 null2 Poyo
 Sumi Nico Mitsu
