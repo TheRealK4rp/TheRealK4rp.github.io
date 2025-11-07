@@ -6,12 +6,12 @@ Sumi Melly Rose Soul
 Nico Latte
 Melly
 null2 Sumi
-Reyna
+Reyna Sae
 
 Nico
 Soul
 Melly
-null2 Rose
+Sae Rose
 Mitsu Soul
 Poyo Rose
 
@@ -19,12 +19,12 @@ Poyo
 Soul
 Poyo Rose
 Melly Latte
-null2 Sumi Soul
+Sae Sumi Soul
 null2 Sumi Mitsu Melly
 
 Reyna
 Melly Latte
-Nico
+Nico Sae
 null2 Poyo
 Sumi Nico Mitsu
 null2 Poyo
