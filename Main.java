@@ -118,7 +118,7 @@ public class Main{
             System.out.println("Enter number of days in the month.");
             int days = s.nextInt();
             s.close();
-            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("october.html"),"UTF-8"));
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("index.html"),"UTF-8"));
             StringBuffer inputBuffer = new StringBuffer();
             String line;
             int i = 0;
@@ -151,7 +151,7 @@ public class Main{
     }
 
     public static String printAsa(){
-        int dayOne = 3; // change this dayThree is Monday
+        int dayOne = 5; // change this dayThree is Monday
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -159,7 +159,7 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var asa = [,,,,,,,,,,,,,,,,,,,,");
+            output.append("var asa = [");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
                 if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 30 ) ) line = ",,";
@@ -216,7 +216,7 @@ public class Main{
     }*/
 
     public static String printYoru(){
-        int dayOne = 6; // change this (dayOne-1 is monday)
+        int dayOne = 1; // change this (dayOne-1 is monday)
         int dayTwo = (dayOne+1) % 7;
         int dayThree = (dayTwo+1) % 7;
         try{
@@ -224,7 +224,7 @@ public class Main{
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,");
+            output.append("var yoru = [");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
                 if (((i+dayOne-1)%7==0 || i >= 30 )) {
