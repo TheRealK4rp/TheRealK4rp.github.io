@@ -1,6 +1,6 @@
 
-null2 Aoi
-null2 Ai
+Poyo Aoi
+Poyo Ai
 
 Sakurin Mikan
 Sakurin Latte Rose
@@ -10,14 +10,14 @@ Sakurin Aoi Latte
 null2 Abso
 Nico
 Sae Latte Rose
-Sae Sumi Latte
+Sae Sumi Latte Poyo
 Sae Sakurin Sumi Ai
 
 null2 Aoi
 Sakurin
 Nico Aoi Rose
 null2 Aoi
-null2 Abso Rose
+Poyo Abso Rose
 null2 Aoi Ai
 
 Nico
@@ -25,7 +25,7 @@ Sumi Ai
 Sae Rose
 Sae Sumi Latte Rose
 null2 Mikan
-null2 Nico
+null2 Nico Poyyo
 
 null2 Abso
 Sae Abso Sakurin Sumi 

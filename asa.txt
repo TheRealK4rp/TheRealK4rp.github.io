@@ -8,14 +8,14 @@ null2 Abso
 
 
 
-null2 Aoi
-null2 Mikan
+Poyo Aoi
+Poyo Mikan
 Nico Abso
 null2 Nico
 
+Poyo
 
-
-null2 Mikan
+Poyo Mikan
 Nico
 Sakurin
 Sakurin
@@ -23,7 +23,7 @@ Sakurin
 
 
 Nico Abso
-null2 Mikan
+Poyo Mikan
 null2 Latte
 Sakurin Abso
 
