@@ -227,7 +227,7 @@ public class Main{
             output.append("var yoru = [");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+dayOne-1)%7==0 || i >= 30 )) {
+                if (((i+dayOne-1)%7==0 || i >= 31 )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
