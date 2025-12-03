@@ -3,7 +3,7 @@
 
 Nico Aoi
 null2 Abso
-
+Reyna
 null2 Abso
 
 
@@ -17,15 +17,15 @@ Poyo
 
 Poyo Mikan
 Nico
-Sakurin
-Sakurin
+Sakurin Moon
+Sakurin Moon
 
 
 
 Nico Abso
 Poyo Mikan
-null2 Latte
-Sakurin Abso
+Reyna Latte
+Sakurin Moon
 
 
 
