@@ -3,7 +3,7 @@ Poyo Aoi
 Poyo Ai
 
 Sakurin Mikan
-Sakurin Latte Rose
+Sakurin Latte Rose Mitsu
 Sakurin Aoi Latte
 
 
@@ -24,7 +24,7 @@ Nico
 Sumi Ai
 Sae Rose
 Sae Sumi Latte Rose
-null2 Mikan
+null2 Mikan Mitsu
 null2 Nico Poyyo
 
 null2 Abso
