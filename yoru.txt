@@ -1,12 +1,12 @@
 
 Poyo Aoi Melly Ai
 Poyo Ai Moon
-Toki
+Toki Dolly
 Sakurin Mikan
 Sakurin Latte Rose Mitsu
 Sakurin Aoi Latte Reyna
 
-Riri
+Riri Dolly
 null2 Abso
 Nico
 Sae Latte Rose Riri
@@ -16,7 +16,7 @@ Sae Sakurin Sumi Ai
 null2 Aoi
 Sakurin
 Nico Aoi Rose
-null2 Aoi
+null2 Aoi Dolly
 Poyo Abso Rose
 Reyna Aoi Ai
 
