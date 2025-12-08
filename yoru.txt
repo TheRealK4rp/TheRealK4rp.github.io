@@ -7,7 +7,7 @@ Sakurin Latte Rose Mitsu
 Sakurin Aoi Latte Reyna
 
 Riri Dolly
-null2 Abso
+null2 Abso Yuna
 Nico
 Sae Latte Rose Riri
 Sae Sumi Latte Poyo
@@ -16,7 +16,7 @@ Sae Sakurin Sumi Ai
 null2 Aoi Soul
 Sakurin
 Nico Aoi Rose
-null2 Aoi Dolly
+null2 Aoi Dolly Yuna
 Poyo Abso Rose
 Reyna Aoi Ai Abso
 
@@ -25,7 +25,7 @@ Sumi Ai Riri
 Sae Rose
 Sae Sumi Latte Rose
 null2 Mikan Mitsu
-Reyna Nico Poyo
+Reyna Nico Poyo Yuna
 
 null2 Abso
 Sae Abso Sakurin Sumi 
