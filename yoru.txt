@@ -17,8 +17,8 @@ Poyo Aoi Soul
 Sakurin Aki Ai
 Nico Aoi Rose
 null2 Aoi Dolly Yuna
-Poyo Rose Aki
-Reyna Aoi Ai
+Poyo Rose Aki Abso
+Poyo Abso Aoi Yuna
 
 Nico
 Sumi Ai Riri
@@ -27,8 +27,8 @@ Sae Sumi Latte Rose
 null2 Mikan Mitsu
 Reyna Nico Poyo Yuna
 
-null2
+null2 Abso
 Sae Sakurin Sumi Riri
-Nico Mikan Aki
+Nico Mikan Aki Abso
 
 
