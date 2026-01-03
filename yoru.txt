@@ -1,5 +1,5 @@
 Sae Abso Sumi
-null2 Melly Moon Sakurin
+Riri Melly Moon Sakurin
 Nico Latte Mitsu Rose
 Reyna Ai Poyo Yuna
 
@@ -18,9 +18,9 @@ Poyo
 
 
 Poyo Aki
-
+Riri
 Sumi
-Sae
+Sae Riri
 null2 Rose
 Sae Reyna Sumi Toki
 
@@ -28,7 +28,7 @@ Poyo
 Sae Soul
 Nico Rose
 Sae Soul
-null2 Aki
+Riri Aki
 
 
 
