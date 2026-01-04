@@ -20,6 +20,7 @@ public class Main{
         //printMissing();
 
         replaceLines(); 
+        replaceLines2();
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -411,7 +412,7 @@ public class Main{
         System.out.print(output.toString());
     }
 
-    public static void printNewMapAsa(){
+    public static String printNewMapAsa(){
         int noDay = 4;
         int noDay2 = (noDay + 1)%7;
         int noDay3 = (noDay + 2)%7;
@@ -444,15 +445,16 @@ public class Main{
             }
             output.append("]);");
             s.close();
-            System.out.println( output.toString());
+            return output.toString();
 
         }
         catch(Exception e){
             e.printStackTrace();
+            return " ";
         }
     }
 
-    public static void printNewMapYoru(){
+    public static String printNewMapYoru(){
         int noDay = 4;
         int noDay2 = (noDay + 1)%7;
         int noDay3 = (noDay + 2)%7;
@@ -468,45 +470,75 @@ public class Main{
                     output.append(String.format("[%d,[\"",i) );
                     if(line.contains(" ")){
                         int count = countNumComma(line);
+                        if((i%7 == (noDay3+1) || i%7 == noDay2 || i%7 == noDay3)) count++;
                         line = line.replace(" ",".jpg\",\"");
                         output.append(line);
+                        output.append(".jpg\",");
                         for(int a = 0; a < (3-count);a++){
                             output.append("\"null2.jpg\",");
                         }
-                        if(i < 30) output.append(".jpg\",,,,,,]],");
-                        else output.append(".jpg\",,,,,,]]");
+                        if(i < 30) output.append(",,,,,,]],");
+                        else output.append(",,,,,,]]");
                     }
                     else{
-                        if(i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",line) );
+                        if((i%7 == (noDay3+1) || i%7 == noDay2 || i%7 == noDay3)) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",line) );
                         else if(i<31)  output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",line) );
                         else{
-                            if(i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,,]]",line) );
+                            if((i%7 == (noDay3+1) || i%7 == noDay2 || i%7 == noDay3)) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,,]]",line) );
                             else output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]]",line) );
                         } 
                     }
                 }
                 else{
-                    if(i%7 == noDay) output.append(String.format("[%d,[,,,,,,]]",i) );
-                    else if(i < 31 && i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",i)  );
+                    if(i%7 == noDay) output.append(String.format("[%d,[,,,,,,]],",i) );
+                    else if(i < 31 && (i%7 == (noDay3+1) || i%7 == noDay2 || i%7 == noDay3)) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",i)  );
                     else if(i < 31 ) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,]],",i)  );
                     else output.append(String.format("[%d,[,,,,,,]]",i) );
                 }
             }
             output.append("]);");
             s.close();
-            System.out.println( output.toString());
+            return output.toString();
 
         }
         catch(Exception e){
             e.printStackTrace();
+            return " ";
         }
     }
 
+    //does not count commas
     public static int countNumComma(String word){
         int count = 0;
         for(char c: word.toCharArray()){
-            if(c == ',') c++;
+            if(c == ' ') count++;
         }
         return count;
+    }
+
+    public static void replaceLines2() {
+        try {
+            // input the (modified) file content to the StringBuffer "input"
+            BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream("uiNew.js"),"UTF-8"));
+            StringBuffer inputBuffer = new StringBuffer();
+            String line;
+            int i = 0;
+            while ((line = file.readLine()) != null) {
+                switch(i){
+                    case 0 -> {line = printNewMapAsa(); i++;}
+                    case 1 -> {line = printNewMapYoru(); i++;}
+                }
+                inputBuffer.append(line);
+                inputBuffer.append('\n');
+            }
+            file.close();
+            // write the new string with the replaced line OVER the same file
+            OutputStreamWriter fileOut = (new OutputStreamWriter(new FileOutputStream("uiNew.js"),StandardCharsets.UTF_8));
+            fileOut.write(inputBuffer.toString());
+            fileOut.close();
+    
+        } catch (Exception e) {
+            System.out.println("Problem reading file.");
+        }
     }
 }
