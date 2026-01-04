@@ -1,4 +1,4 @@
-const asa = new Map([[0,["jia.jpg","latte.jpg",,,,,,]],[1,["poyo.jpg","aki.jpg",,,,,,]],[2,["null2.jpg","sumi.jpg",,,,,,]],[3,["null2.jpg","null2.jpg",,,,,]],[4,[,,,,,,]],[5,[,,,,,,]],[6,[,,,,,,]],[7,["null2.jpg","rose.jpg",,,,,,]],[8,["abso.jpg","null2.jpg",,,,,]],[9,["null2.jpg","null2.jpg",,,,,]],[10,["null2.jpg","null2.jpg",,,,,]],[11,[,,,,,,]],[12,[,,,,,,]],[13,[,,,,,,]],[14,["nico.jpg","null2.jpg",,,,,]],[15,["sumi.jpg","null2.jpg",,,,,]],[16,["null2.jpg","null2.jpg",,,,,]],[17,["null2.jpg","null2.jpg",,,,,]],[18,[,,,,,,]],[19,[,,,,,,]],[20,[,,,,,,]],[21,["poyo.jpg","null2.jpg",,,,,]],[22,["nico.jpg","null2.jpg",,,,,]],[23,["null2.jpg","abso.jpg",,,,,,]],[24,["null2.jpg","null2.jpg",,,,,]],[25,[,,,,,,]],[26,[,,,,,,]],[27,[,,,,,,]],[28,["poyo.jpg","aki.jpg",,,,,,]],[29,["sumi.jpg","null2.jpg",,,,,]],[30,["null2.jpg","latte.jpg",,,,,,]]]);
+const asa = new Map([[0,["jia.jpg","latte.jpg","latte.jpg","latte.jpg","latte.jpg",,,]],[1,["poyo.jpg","aki.jpg",,,,,,]],[2,["null2.jpg","sumi.jpg",,,,,,]],[3,["null2.jpg","null2.jpg",,,,,]],[4,[,,,,,,]],[5,[,,,,,,]],[6,[,,,,,,]],[7,["null2.jpg","rose.jpg",,,,,,]],[8,["abso.jpg","null2.jpg",,,,,]],[9,["null2.jpg","null2.jpg",,,,,]],[10,["null2.jpg","null2.jpg",,,,,]],[11,[,,,,,,]],[12,[,,,,,,]],[13,[,,,,,,]],[14,["nico.jpg","null2.jpg",,,,,]],[15,["sumi.jpg","null2.jpg",,,,,]],[16,["null2.jpg","null2.jpg",,,,,]],[17,["null2.jpg","null2.jpg",,,,,]],[18,[,,,,,,]],[19,[,,,,,,]],[20,[,,,,,,]],[21,["poyo.jpg","null2.jpg",,,,,]],[22,["nico.jpg","null2.jpg",,,,,]],[23,["null2.jpg","abso.jpg",,,,,,]],[24,["null2.jpg","null2.jpg",,,,,]],[25,[,,,,,,]],[26,[,,,,,,]],[27,[,,,,,,]],[28,["poyo.jpg","aki.jpg",,,,,,]],[29,["sumi.jpg","null2.jpg",,,,,]],[30,["null2.jpg","latte.jpg",,,,,,]]]);
 
 
 
@@ -14,7 +14,6 @@ function startUp(){
 
     calendar.addEventListener('scroll', e => {
         daysWeek.scrollLeft = calendar.scrollLeft;
-        daysWeek.scrollTop = calendar.scrollTop;
     });
 
     if(true){
@@ -75,14 +74,14 @@ function makeNULL(id){
 }
 
 function resize(id){
-        resizeI(id,'45px','45px');
+        resizeI(id,'55px','55px');
 }
 
 function resizeI(id,w,h){
         document.getElementById(id).style.width = w
         document.getElementById(id).style.height = h
-        document.getElementById(id+'-2').style.width = '45px'
-        document.getElementById(id+'-2').style.height = '45px'
+        document.getElementById(id+'-2').style.width = '55px'
+        document.getElementById(id+'-2').style.height = '55px'
 }
 
 function setAllNull(){

@@ -91,11 +91,21 @@ div{
 .calendarBodyMain{
     width: var(--maxWidth);
     overflow-x: auto;
-    white-space: c;
     clear: none;
+    position: sticky;
+    top: 13vh;
+    align-self:start;
+
 }
 
 .eventOverlay{
+    
+}
+
+.daysWeek2{
+    background-color: rgb(82, 87, 87) !important;
+    text-align: center !important;
+    position: sticky !important;
 
 }
 
@@ -104,27 +114,25 @@ div{
     display:grid;
     text-align: left;
     grid-template-columns: repeat(7, 35%);
-    grid-template-rows: repeat(5, 34vh);
-    position: relative;
-    
+    grid-template-rows: repeat(5, 36vh);
 }
 
 .calendarBody > div{
     position: relative;
     background-color: rgba(192,192,192,1);
     width: 100%;
-    height: 34vh;
+    height: 36vh;
     font-size: 5cqb;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: fit-content;
-    border: 1px solid blue;
 }
 
 .calendarBody > div > div{
-    padding-left: 1vw;
     padding-top: 2px;
+    position: relative;
+    padding-left: 1vw;
 }
 
 .header div{
@@ -178,7 +186,7 @@ span{
     display:grid;
     text-align: left;
     grid-template-columns: repeat(7, 14.285%);
-    grid-template-rows: repeat(5, 38vh);
+    grid-template-rows: 38vh 38vh 38vh 38vh 38vh;
     position: relative;
     
     }
@@ -193,8 +201,8 @@ span{
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: fit-content;
-    border: 1px solid blue;
-    }
+
+}
 
     .calendarBody > div > div{
         min-width: 60px;
