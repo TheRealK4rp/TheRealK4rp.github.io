@@ -19,13 +19,14 @@ public class Main{
 
         //printMissing();
 
-        //replaceLines(); 
+        replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
-        printNewHtml();
+        //printNewHtml();
+        //printNewMapAsa();
 
     }
 
@@ -409,4 +410,83 @@ public class Main{
         System.out.print(output.toString());
     }
 
+    public static void printNewMapAsa(){
+        int noDay = 4;
+        int noDay2 = (noDay + 1)%7;
+        int noDay3 = (noDay + 2)%7;
+        try{
+            File file = new File("asa.txt");
+            FileInputStream in = new FileInputStream(file);
+            Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            output.append("const asa = new Map([");
+            for(int i = 0;i<31;i++){
+                String line = s.nextLine().toLowerCase().trim();
+                if(line != ""){ 
+                    output.append(String.format("[%d,[\"",i) );
+                    if(line.contains(" ")){
+                        line = line.replace(" ",".jpg\",\"");
+                        output.append(line);
+                        if(i < 30) output.append(".jpg\",,,,,,]],");
+                        else output.append(".jpg\",,,,,,]]");
+                    }
+                    else{
+                        if(i < 30) output.append(String.format( "%s.jpg\",\"null2.jpg\",,,,,]],",line) );
+                        else output.append(String.format( "%s.jpg\",\"null2.jpg\",,,,,]]",line) );
+                    }
+                }
+                else{
+                    if(i < 31 && i%7 != noDay && i%7!= noDay2 && i%7 != noDay3) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",,,,,]],",i)  );
+                    else if(i == 31) output.append(String.format("[%d,[,,,,,,]]",i) );
+                    else output.append(String.format("[%d,[,,,,,,]],",i) );
+                }
+            }
+            output.append("]);");
+            s.close();
+            System.out.println( output.toString());
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void printNewMapYoru(){
+        try{
+            File file = new File("asa.txt");
+            FileInputStream in = new FileInputStream(file);
+            Scanner s = new Scanner(in);
+            StringBuilder output = new StringBuilder();
+            output.append("const asa = new Map([");
+            for(int i = 0;i<31;i++){
+                String line = s.nextLine().toLowerCase().trim();
+                if(line != ""){ 
+                    output.append(String.format("[%d,[\"",i) );
+                    line = line.replace(" ",".jpg\",\"");
+                    output.append(line);
+                    if(i < 30) output.append(".jpg\",,,,,,]],");
+                    else output.append(".jpg\",,,,,,]]");
+                }
+                else{
+                    if(i < 30) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",,,,,]],",i)  );
+                    else output.append(String.format("[%d,[,,,,,,]]",i) );
+                }
+            }
+            output.append("]);");
+            s.close();
+            System.out.println( output.toString());
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static int countNumComma(String word){
+        int count = 0;
+        for(char c: word.toCharArray()){
+            if(c == ',') c++;
+        }
+        return count;
+    }
 }
