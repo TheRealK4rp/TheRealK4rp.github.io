@@ -52,19 +52,19 @@ html {
 }
 
 div{
-    font-size: 50px;
+    font-size: 4cqb;
 }
 
 .bannerImage{
     height: 20vh;
     width: 100vw;
     background-color: blue;
-    background-size: 22%;
+    background-size: 40%;
     background-image: url(other/bkgnew.png);
 }
 
 .daysWeekContainer{
-    width: var(--maxWidth);
+    min-width: var(--maxWidth);
     white-space: nowrap;
 }
 
@@ -73,10 +73,10 @@ div{
     top: 13vh;
     display:grid;
     text-align: center;
-    grid-template-columns: repeat(7, 30%);
+    grid-template-columns: repeat(7, 35%);
     box-sizing: border-box;
     z-index: 10;
-    width: var(--maxWidth);
+    width: 100vw;
     overflow-x: auto;
     white-space: nowrap;
     
@@ -91,7 +91,8 @@ div{
 .calendarBodyMain{
     width: var(--maxWidth);
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: c;
+    clear: none;
 }
 
 .eventOverlay{
@@ -102,8 +103,8 @@ div{
     background-color: rgb(0, 0, 0);
     display:grid;
     text-align: left;
-    grid-template-columns: repeat(7, 30%);
-    grid-template-rows: repeat(5, 29vh);
+    grid-template-columns: repeat(7, 35%);
+    grid-template-rows: repeat(5, 34vh);
     position: relative;
     
 }
@@ -112,12 +113,13 @@ div{
     position: relative;
     background-color: rgba(192,192,192,1);
     width: 100%;
-    height: 29vh;
-    font-size: 3cqb;
+    height: 34vh;
+    font-size: 5cqb;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: fit-content;
+    border: 1px solid blue;
 }
 
 .calendarBody > div > div{
@@ -131,11 +133,97 @@ div{
 
 
 div > img{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     /*background-image: url(other/bkgnew.png);*/
 }
 img{
     border: 1px solid rgb(65, 65, 65);
     border-radius:50%;  
+}
+
+span{
+    visibility: hidden;
+    width:auto;
+    background-color: rgba(184, 183, 183, 0.452);
+    color: #030303;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    padding: 4px 10px 4px 10px;
+    margin: 0px;
+    border:1px solid rgba(68, 68, 68, 0.452);
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: -10px;
+}
+
+.calendarBody div div:hover span{ 
+    visibility: visible;
+}
+
+@media (min-width: 500px) {
+    .bannerImage{
+        min-width: 1000px;
+        height: 40vh;
+        width: 100vw;
+        background-color: blue;
+        background-size: 22%;
+        background-image: url(other/bkgnew.png);
+    }
+
+    .calendarBody{
+    min-width: 1000px;
+    background-color: rgb(0, 0, 0);
+    display:grid;
+    text-align: left;
+    grid-template-columns: repeat(7, 14.285%);
+    grid-template-rows: repeat(5, 38vh);
+    position: relative;
+    
+    }
+
+    .calendarBody > div{
+    position: relative;
+    background-color: rgba(192,192,192,1);
+    width: 100%;
+    height: 38vh;
+    font-size: 5cqb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: fit-content;
+    border: 1px solid blue;
+    }
+
+    .calendarBody > div > div{
+        min-width: 60px;
+        min-height: 62px;
+    }
+
+    .daysWeek{
+    min-width: 1000px;
+    position: sticky;
+    top: 13vh;
+    display:grid;
+    text-align: center;
+    grid-template-columns: repeat(7, 14.2%);
+    box-sizing: border-box;
+    z-index: 10;
+    width: var(--maxWidth);
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    }
+
+    div > img{
+    min-width: 60px;
+    min-height: 60px;
+    /*background-image: url(other/bkgnew.png);*/
+    }
+
+    .calendarBody > div > div{
+    padding-left: 1px;
+    padding-top: 2px;
+    }
 }
