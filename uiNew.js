@@ -74,14 +74,14 @@ function makeNULL(id){
 }
 
 function resize(id){
-        resizeI(id,'55px','55px');
+        resizeI(id,'100px','100px');
 }
 
 function resizeI(id,w,h){
         document.getElementById(id).style.width = w
         document.getElementById(id).style.height = h
-        document.getElementById(id+'-2').style.width = '55px'
-        document.getElementById(id+'-2').style.height = '55px'
+        document.getElementById(id+'-2').style.width = '100px'
+        document.getElementById(id+'-2').style.height = '100px'
 }
 
 function setAllNull(){
