@@ -41,6 +41,8 @@ html {
 
 .shiftButton{
     position: absolute;
+    background-color: #01f8c6;
+    padding: 2px;
     left: 85%;
     top: 38%;
 }
@@ -73,7 +75,7 @@ div{
     top: 13vh;
     display:grid;
     text-align: center;
-    grid-template-columns: repeat(7, 300px);
+    grid-template-columns: repeat(7, 120px);
     box-sizing: border-box;
     z-index: 10;
     width: 100vw;
@@ -113,15 +115,15 @@ div{
     background-color: rgb(0, 0, 0);
     display:grid;
     text-align: left;
-    grid-template-columns: repeat(7, 300px);
-    grid-template-rows: repeat(5, 370px);
+    grid-template-columns: repeat(7, 120px);
+    grid-template-rows: repeat(5, 200px);
 }
 
 .calendarBody > div{
     position: relative;
     background-color: rgba(192,192,192,1);
     width: 100%;
-    height: 370px;
+    height: 200px;
     font-size: 5cqb;
     display: flex;
     flex-wrap: wrap;
@@ -175,6 +177,7 @@ span{
     padding: 5px 5px;
     text-decoration: none;
     display: block;
+    z-index:11;
 }
 
 .buttonStuff a:hover {
