@@ -27,6 +27,7 @@ public class Main{
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
         //printNewHtml();
         //printNewMapAsa();
+        printNewMapYoru();
 
     }
 
@@ -452,23 +453,42 @@ public class Main{
     }
 
     public static void printNewMapYoru(){
+        int noDay = 4;
+        int noDay2 = (noDay + 1)%7;
+        int noDay3 = (noDay + 2)%7;
         try{
-            File file = new File("asa.txt");
+            File file = new File("yoru.txt");
             FileInputStream in = new FileInputStream(file);
             Scanner s = new Scanner(in);
             StringBuilder output = new StringBuilder();
-            output.append("const asa = new Map([");
+            output.append("const yoru = new Map([");
             for(int i = 0;i<31;i++){
                 String line = s.nextLine().toLowerCase().trim();
                 if(line != ""){ 
                     output.append(String.format("[%d,[\"",i) );
-                    line = line.replace(" ",".jpg\",\"");
-                    output.append(line);
-                    if(i < 30) output.append(".jpg\",,,,,,]],");
-                    else output.append(".jpg\",,,,,,]]");
+                    if(line.contains(" ")){
+                        int count = countNumComma(line);
+                        line = line.replace(" ",".jpg\",\"");
+                        output.append(line);
+                        for(int a = 0; a < (3-count);a++){
+                            output.append("\"null2.jpg\",");
+                        }
+                        if(i < 30) output.append(".jpg\",,,,,,]],");
+                        else output.append(".jpg\",,,,,,]]");
+                    }
+                    else{
+                        if(i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",line) );
+                        else if(i<31)  output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",line) );
+                        else{
+                            if(i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",,,,,]]",line) );
+                            else output.append(String.format( "%s.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]]",line) );
+                        } 
+                    }
                 }
                 else{
-                    if(i < 30) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",,,,,]],",i)  );
+                    if(i%7 == noDay) output.append(String.format("[%d,[,,,,,,]]",i) );
+                    else if(i < 31 && i%7 != (noDay3+1) && i%7!= noDay2 && i%7 != noDay3) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,,]],",i)  );
+                    else if(i < 31 ) output.append(String.format("[%d,[\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",\"null2.jpg\",,,]],",i)  );
                     else output.append(String.format("[%d,[,,,,,,]]",i) );
                 }
             }

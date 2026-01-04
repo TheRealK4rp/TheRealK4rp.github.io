@@ -16,27 +16,37 @@ function startUp(){
         daysWeek.scrollLeft = calendar.scrollLeft;
     });
 
-    if(true){
+    
+}
+
+function changeS(shift){
         const modifier = 6*(3)
+        setAllNull();
+        if(shift == "asa"){
                 for(let i = 0;i < 31;i++){
                         for(let a = 0; a < 6; a++){
-                            const name = "temp" + (i*6+a+modifier)
-                            if(asa.get(i)[a] == null){
+                                const name = "temp" + (i*6+a+modifier)
+                                if(asa.get(i)[a] == null){
                                 makeNULL(name)
-                            }
-                            else{
+                                }
+                                else{
                                 addImgAndName(name,asa.get(i)[a],"maids/")                        
-                            }
+                                }
                         }
                 }
         }
         else{
                 for(let i = 0;i < 140;i++){
-                        if(yoru[i] == null || i > 140){
-                                makeNULL('temp'+i)
-                        }
-                        else{
-                                addImgAndName("temp"+i,yoru[i],"maids/")                        
+                        for(let i = 0;i < 31;i++){
+                                for(let a = 0; a < 6; a++){
+                                        const name = "temp" + (i*6+a+modifier)
+                                        if(yoru.get(i)[a] == null){
+                                        makeNULL(name)
+                                        }
+                                        else{
+                                        addImgAndName(name,yoru.get(i)[a],"maids/")                        
+                                        }
+                                }
                         }
                 }
         }
