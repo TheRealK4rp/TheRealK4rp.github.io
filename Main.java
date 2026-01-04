@@ -19,12 +19,14 @@ public class Main{
 
         //printMissing();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLinesTemp(); 
 
         //removelink(link);
         //changeFirstTwoLines(); ok the other one works now lol
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
+        printNewHtml();
+
     }
 
     public static void removelink(String link){
@@ -386,6 +388,25 @@ public class Main{
         catch(Exception e){
             e.printStackTrace();
         }
+    }
+//<div id = temp4-2><span id = temp4-1></span><img id = temp4></div>
+    public static void printNewHtml(){
+        StringBuilder output = new StringBuilder();
+        int day = 1;
+        output.append("<div>\n");
+        for(int i = 0; i< 210; i ++){
+            if(i%6==0){
+                output.append("\t</div>\n\t<div>");
+                if(i/6 > 2 && day <= 31){
+                    output.append(String.format("%d", day));
+                    day++;
+                }
+                output.append("\n");
+            }
+            output.append(String.format("\t\t<div id = temp%d-2><span id = temp%d-1></span><img id=temp%d></div>\n",i,i,i));
+        }
+        output.append("\t</div>");
+        System.out.print(output.toString());
     }
 
 }
