@@ -13,24 +13,26 @@
         gtag('config', 'G-JE8GJXWP0V');
 	    </script>
     </head>
-    <script src = "index.js"></script>
-<body>
+    <script src = "uiNew.js"></script>
+<body onload = "startUp()">
 <div class = "header" >
     <div class = "headerText">Month</div>
     <div class = "shiftButton">Shift</div>
     <div class = "chooseMaidButton">Maid</div>
 </div>
 <div class = "bannerImage"></div>
-<div class = daysWeek>
-    <div>Mon</div>
-    <div>Tues</div>
-    <div>Wed</div>
-    <div>Thurs</div>
-    <div>Fri</div>
-    <div>Sat</div>
-    <div>Sun</div>
-</div>
-<div class = calendarBodyMain>
+<div class = daysWeekContainer>
+    <div id = "daysWeek" class = daysWeek>
+        <div>Mon</div>
+        <div>Tues</div>
+        <div>Wed</div>
+        <div>Thurs</div>
+        <div>Fri</div>
+        <div>Sat</div>
+        <div>Sun</div>
+    </div>
+
+<div class = calendarBodyMain id = calendarBody>
     <div class = eventOverlay></div>
     <div class = calendarBody>
         <div>
@@ -314,6 +316,8 @@
                 <div id = temp209-2><span id = temp209-1></span><img id=temp209></div>
         </div>
     </div>
+    
+</div>
 </div>
 
 

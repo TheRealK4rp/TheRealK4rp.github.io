@@ -33,8 +33,8 @@ html {
 
 .headerText{
     position: absolute;
-    font-size: 10cqb !important;
-    top: 5%;
+    font-size: 5cqb !important;
+    top:27%;
     left: 0%;
     padding-left: 1%;
 }
@@ -42,13 +42,13 @@ html {
 .shiftButton{
     position: absolute;
     left: 70%;
-    top: 28%;
+    top: 38%;
 }
 
 .chooseMaidButton{
     position: absolute;
     left: 85%;
-    top: 28%;
+    top: 38%;
 }
 
 div{
@@ -56,11 +56,16 @@ div{
 }
 
 .bannerImage{
-    height: 30vh;
+    height: 20vh;
     width: 100vw;
     background-color: blue;
     background-size: 22%;
     background-image: url(other/bkgnew.png);
+}
+
+.daysWeekContainer{
+    width: var(--maxWidth);
+    white-space: nowrap;
 }
 
 .daysWeek{
@@ -68,9 +73,12 @@ div{
     top: 13vh;
     display:grid;
     text-align: center;
-    grid-template-columns: repeat(7, 14.285%);
+    grid-template-columns: repeat(7, 30%);
     box-sizing: border-box;
     z-index: 10;
+    width: var(--maxWidth);
+    overflow-x: auto;
+    white-space: nowrap;
     
 }
 
@@ -81,7 +89,9 @@ div{
 }
 
 .calendarBodyMain{
-
+    width: var(--maxWidth);
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .eventOverlay{
@@ -92,7 +102,7 @@ div{
     background-color: rgb(0, 0, 0);
     display:grid;
     text-align: left;
-    grid-template-columns: repeat(7, 14.285%);
+    grid-template-columns: repeat(7, 30%);
     grid-template-rows: repeat(5, 29vh);
     position: relative;
     
@@ -103,7 +113,7 @@ div{
     background-color: rgba(192,192,192,1);
     width: 100%;
     height: 29vh;
-    font-size: 5cqb;
+    font-size: 3cqb;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -116,7 +126,7 @@ div{
 }
 
 .header div{
-    font-size: 5cqb;
+    font-size: 3cqb;
 }
 
 
