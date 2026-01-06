@@ -3,9 +3,9 @@ const yoru = new Map([[0,["sae.jpg","abso.jpg","sumi.jpg","null2.jpg",,,,,,,]],[
 
 const instaL = new Map([['abso', 'maid.abso'],['ai', 'maid_aikichune'], ['aki','maid_aki_'],["aoi",'maid_aoi'],['berry',"sweetly__berry"],["dolly","matadollyy"],['jia',"maidjia"],['latte','latte_maid'],['lulu', 'maidlulu'],['mahou',"maid.mahou"],['mari',"wan.wan.mari"],['melly',"maid.melly"],['mikan', 'maid.mikan'],['mitsu',"maid_mitsu"],['moon',"moemoe.moon"],['nico',"nicotheunbridled"],['niya','maid_niya'],['nyan','maidnyan'],['poyo','maid.poyo'],['reyna',"otohimehaato"],['riri',"ririmaid"],['rose',"bytesizeangel"],['sae','dfmsae'],['saiki','maid_saiki'],['sakurin',"sakurin_maid"],['soul',"moomookyun"],['sumi','maid_sumi'],['toki','toki.etc_'],['yuna',"yuna.maid"]])
 function startUp(){
-    //setAllNull();
     const daysWeek = document.getElementById('daysWeek');
     const calendar = document.getElementById('calendarBody');
+    const body = document.getElementById('main');
     daysWeek.addEventListener('scroll', e => {
         calendar.scrollLeft = daysWeek.scrollLeft;
         calendar.scrollTop = daysWeek.scrollTop;
@@ -13,6 +13,11 @@ function startUp(){
 
     calendar.addEventListener('scroll', e => {
         daysWeek.scrollLeft = calendar.scrollLeft;
+        daysWeek.scrollTop = calendar.scrollTop;
+    });
+
+    body.addEventListener('scroll', e => {
+        daysWeek.scrollTop = body.scrollTop;
     });
     
     changeS("yoru");

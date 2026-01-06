@@ -19,6 +19,10 @@ html {
     margin: auto;
 }
 
+body{
+    width: var(--maxWidth);
+}
+
 
 .header{
     position: sticky;
@@ -78,7 +82,7 @@ div{
     grid-template-columns: repeat(7, 120px);
     box-sizing: border-box;
     z-index: 10;
-    width: 100vw;
+    width: var(--maxWidth);
     overflow-x: auto;
     white-space: nowrap;
     
@@ -91,8 +95,8 @@ div{
 }
 
 .calendarBodyMain{
-    width: var(--maxWidth);
-    overflow-x: auto;
+    width: 100vw;
+    overflow-x: scroll;
     clear: none;
     position: sticky;
     top: 13vh;
@@ -113,7 +117,7 @@ div{
 
 .calendarBody{
     background-color: rgb(0, 0, 0);
-    display:grid;
+    display: grid;
     text-align: left;
     grid-template-columns: repeat(7, 120px);
     grid-template-rows: repeat(5, 200px);
@@ -129,6 +133,7 @@ div{
     flex-wrap: wrap;
     flex-direction: column;
     flex-basis: fit-content;
+    border: 1px black solid;
 }
 
 .calendarBody > div > div{
@@ -164,8 +169,9 @@ span{
     margin: 0px;
     border:1px solid rgba(68, 68, 68, 0.452);
     border-radius: 50%;
-    margin-left: 50px;
+    margin-left: -100px;
     margin-top: -10px;
+    overflow: hidden;
 }
 
 .calendarBody div div:hover span{ 
