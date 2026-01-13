@@ -20,7 +20,7 @@ public class Main{
         //printMissing();
 
         replaceLines(); 
-        replaceLines2();
+        //replaceLines2();
         //replaceLinesTemp(); 
 
         //removelink(link);
@@ -28,7 +28,7 @@ public class Main{
         // doesnt actually work well becaue of if you write more than the previous amount it kinda just breaks things lmao
         //printNewHtml();
         //printNewMapAsa();
-        printNewMapYoru();
+        //printNewMapYoru();
 
     }
 
