@@ -250,7 +250,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) && i != 1 && i != 3){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) && i != 1 && i != 3 && i!= 27){ 
                                 d--;
                                 f=true;
                             }
