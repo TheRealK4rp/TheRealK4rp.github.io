@@ -39,7 +39,12 @@ video{
     grid-template-rows: repeat(6, 238px);
 }
 
-span{
+li > span{
+    opacity:50% !important;
+    background-color: rgb(255, 255, 255);
+}
+
+div > span{
     visibility: hidden;
     width:auto;
     background-color: rgba(184, 183, 183, 0.452);
@@ -151,7 +156,7 @@ span{
 .calender div li{
     display: inline-block;
     width: 100%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 10px;
 }
@@ -187,9 +192,10 @@ img{
 }
 
 .month ul li{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 90px;
+    opacity: 100%;
 }
 
 .month ul{
