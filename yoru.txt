@@ -2,27 +2,27 @@ Nico Yuna Ai Saiki
 
 Poyo Aoi
 Nico Poyo Sakurin
-Sumi
+Sumi Soul
 Riri Abso Nico Rose
-Mitsu Riri
+Mitsu Riri Soul
 Riri Latte Rose Sumi
 
 null2 Sakurin
 Poyo
 Sumi Abso
-null2 Latte Rose
+null2 Latte Rose Soul
 null2 Mitsu Abso
 Riri Yuna Rose Sakurin
 
 Poyo Sumi
-Nico
+Nico Soul
 Sakurin Abso
 Sumi
 null2 Mitsu
 Riri Latte Poyo Rose
 
 Poyo
-Sumi
+Sumi Soul
 Poyo Abso
 
 
