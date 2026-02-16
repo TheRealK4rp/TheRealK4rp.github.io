@@ -8,22 +8,22 @@ Mitsu Riri Soul Abso
 Riri Latte Rose Sumi
 
 null2 Sakurin Moon
-Poyo
+Poyo Yuna Ai
 Sumi Abso
-null2 Latte Rose Soul
-null2 Mitsu Abso
+Jia Latte Rose Soul
+Jia Mitsu Abso
 Riri Yuna Rose Sakurin
 
 Poyo Sumi Aki
 Nico Soul
 Sakurin Abso Moon
-Sumi
-null2 Mitsu
+Sumi Yuna Nyan Mikan
+null2 Mitsu Moon Melly
 Riri Latte Poyo Rose
 
-Poyo Aki
-Sumi Soul
-Poyo Abso
+Poyo Aki Soul
+Sumi Soul Ai
+Poyo Abso Mikan
 
 
 
