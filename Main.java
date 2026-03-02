@@ -19,7 +19,7 @@ public class Main{
 
         //printMissing();
 
-        replaceLines(); 
+        //replaceLines(); 
         //replaceLines2();
         //replaceLinesTemp(); 
 
@@ -91,7 +91,7 @@ public class Main{
         int wednesday = (monday+2) % 7;
         StringBuilder out = new StringBuilder();
         int day = 1;
-        for(int i = 0; i<140;i++){
+        for(int i = 0; i<168;i++){
             if(i%4==0){
                 if(day == -1){ out.append("</div>\n<div id = 'special'>\n");}
                 else out.append("</div>\n<div>\n");

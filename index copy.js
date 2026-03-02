@@ -28,7 +28,7 @@ function daynight(array,ti,maid){
 function onlyMember(maid){
         var index = []
         changeS('asa');
-        for(let i = 0; i < 140; i++){
+        for(let i = 0; i < 168; i++){
                 hide("temp"+i)
         }
 
@@ -63,8 +63,8 @@ function changeS(shift){
 
         if(shift == "asa"){
                 addAndRemoveMana('asa');
-                for(let i = 0;i < 140;i++){
-                        if(asa[i] == null || i >140){
+                for(let i = 0;i <168;i++){
+                        if(asa[i] == null || i >168){
                                 makeNULL('temp'+i);
                         }
                         else{
@@ -74,8 +74,8 @@ function changeS(shift){
         }
         else{
                 addAndRemoveMana('yoru');
-                for(let i = 0;i < 140;i++){
-                        if(yoru[i] == null || i > 140){
+                for(let i = 0;i < 168;i++){
+                        if(yoru[i] == null || i > 168){
                                 makeNULL('temp'+i)
                         }
                         else{
