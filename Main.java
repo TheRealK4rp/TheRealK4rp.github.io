@@ -19,7 +19,7 @@ public class Main{
 
         //printMissing();
 
-        //replaceLines(); 
+        replaceLines(); 
         //replaceLines2();
         //replaceLinesTemp(); 
 
@@ -167,7 +167,7 @@ public class Main{
             output.append("var asa = [,,,,,,,,,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 27 ) ) line = ",,";
+                if(((i+dayOne) % 7 == 0 || (i+dayTwo) % 7 == 0 || (i+dayThree) % 7 == 0 || i > 32 || i == 0 ) ) line = ",,";
                 else if(line.equals("")) line = "\"null2.png\",\"null2.png\",";
                 else{
                     int a = line.indexOf(" ");
@@ -232,7 +232,7 @@ public class Main{
             output.append("var yoru = [,,,,,,,,,,,,,,,,,,,,,,,,");
             for(int i = 0;i<32;i++){
                 String line = s.nextLine().toLowerCase().trim();
-                if (((i+dayOne-1)%7==0 || i >= 28  )) {
+                if (((i+dayOne-1)%7==0 || i >= 31  )) {
                     line = ",,,,";
                 }
                 else if(line.equals("")){
@@ -250,7 +250,7 @@ public class Main{
                             int d = 4-b-1;
                             boolean f = false;
                             //day - 1 to add one
-                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) && i != 1 && i != 3 && i!= 27 && i != 17){ 
+                            if(!(((i+dayOne)%7 == 0 || (i+dayTwo)%7 == 0 || (i+dayThree) % 7 == 0) ) && i != 1 ){ 
                                 d--;
                                 f=true;
                             }

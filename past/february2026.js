@@ -28,7 +28,7 @@ function daynight(array,ti,maid){
 function onlyMember(maid){
         var index = []
         changeS('asa');
-        for(let i = 0; i < 168; i++){
+        for(let i = 0; i < 140; i++){
                 hide("temp"+i)
         }
 
@@ -63,8 +63,8 @@ function changeS(shift){
 
         if(shift == "asa"){
                 addAndRemoveMana('asa');
-                for(let i = 0;i <168;i++){
-                        if(asa[i] == null || i >168){
+                for(let i = 0;i < 140;i++){
+                        if(asa[i] == null || i >140){
                                 makeNULL('temp'+i);
                         }
                         else{
@@ -74,8 +74,8 @@ function changeS(shift){
         }
         else{
                 addAndRemoveMana('yoru');
-                for(let i = 0;i < 168;i++){
-                        if(yoru[i] == null || i > 168){
+                for(let i = 0;i < 140;i++){
+                        if(yoru[i] == null || i > 140){
                                 makeNULL('temp'+i)
                         }
                         else{
@@ -99,7 +99,7 @@ function addImgAndName(id,img,file){
         document.getElementById(id).style.visibility = "visible"
         document.getElementById(id+"-2").style = 'cursor:pointer;'
         document.getElementById(id+"-1").style.display = "inherit";
-        document.getElementById(id).src=file+img;
+        document.getElementById(id).src="/"+file+img;
         resize(id)
         if(img != "null2.png" && img != 'bny.png'){
                 var t = img.charAt(0).toUpperCase();
