@@ -1,33 +1,32 @@
 Toki Sakurin Soul Dolly
 
-null2 Moon
-Nico
-null2 Abso Soul
-Nico
+Sumi Moon
+Nico Sakurin
+Sumi Abso Soul
+Sumi Nico
 null2 Poyo
 null2 Nico Poyo
 
 Poyo Moon Abso
 null2 Mikan
-
+Sumi
 Nico Soul
+null2 Sumi
+null2 Mikan Sumi
 
-null2 Mikan
-
-null2 Poyo
+Sakurin Poyo
 Nico
-null2 Soul
-
+Sumi Soul
+Sumi
 
 null2 Poyo
 
 Poyo Abso
-
-Poyo Soul Mikan
-null2 Soul
+null2 Sumi Sakurin
+Sumi Soul
 
 null2 Soul Poyo
-
+null2 Sakurin
 Poyo
 
 
