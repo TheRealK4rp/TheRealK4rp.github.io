@@ -9,6 +9,10 @@ html {
     margin: auto;
 }
 
+.b {
+    color: gold !important; 
+}
+
 body {
     display: table-cell;
     vertical-align: middle;
