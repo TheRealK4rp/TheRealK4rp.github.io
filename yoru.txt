@@ -4,14 +4,14 @@ Sumi Moon Aki
 Nico Sakurin
 Sumi Abso Soul Sae
 Sumi Nico
-null2 Poyo
-null2 Nico Poyo
+null2 Poyo Reyna
+null2 Nico Poyo Reyna
 
 Poyo Moon Abso
 null2 Mikan
 Sumi
 Nico Soul
-null2 Sumi
+Mitsu Sumi
 null2 Mikan Sumi
 
 Sakurin Poyo
@@ -19,7 +19,7 @@ Nico
 Sumi Soul
 Sumi
 
-null2 Poyo
+null2 Poyo Mitsu
 
 Poyo Abso
 null2 Sumi Sakurin
