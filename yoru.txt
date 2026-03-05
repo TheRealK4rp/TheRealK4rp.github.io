@@ -3,21 +3,21 @@ Toki Sakurin Soul Dolly
 Sumi Moon Aki
 Nico Sakurin Rose Dolly
 Sumi Abso Soul Sae
-Nico Sumi
+Nico Sumi Nyan
 null2 Poyo Reyna Nico
 null2 Nico Poyo Reyna
 
 Poyo Moon Abso
-null2 Mikan
+null2 Mikan Nyan
 Sumi
-Nico Soul
+Nico Soul Nyan
 Mitsu Sumi Nico
-null2 Mikan Sumi
+null2 Mikan Sumi Latte
 
 Sakurin Poyo
 Nico
 Sumi Soul
-Sumi
+Sumi Nyan
 
 null2 Poyo Mitsu
 
@@ -25,7 +25,7 @@ Poyo Abso
 null2 Sumi Sakurin
 Sumi Soul
 
-null2 Soul Poyo
+null2 Soul Poyo Latte
 null2 Sakurin
 Poyo
 
