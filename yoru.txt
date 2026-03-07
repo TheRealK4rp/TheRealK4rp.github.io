@@ -9,7 +9,7 @@ null2 Nico Poyo Reyna
 
 Poyo Moon Abso
 null2 Mikan Nyan
-Sumi
+Sumi Dolly
 Nico Soul Nyan
 Mitsu Sumi Nico
 null2 Mikan Sumi Latte
@@ -17,14 +17,14 @@ null2 Mikan Sumi Latte
 Sakurin Poyo
 Nico
 Sumi Soul
-Sumi Nyan
+Sumi Nyan Dolly
 
 null2 Poyo Mitsu
 
 Poyo Abso
 null2 Sumi Sakurin
 Sumi Soul
-
+null2 Dolly
 null2 Soul Poyo Latte
 null2 Sakurin
 Poyo
