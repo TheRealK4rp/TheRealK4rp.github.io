@@ -4,27 +4,27 @@ Sumi Moon Aki
 Nico Sakurin Rose Dolly
 Sumi Abso Soul Sae
 Nico Ai Rose Nyan
-null2 Poyo Reyna Nico
-null2 Nico Poyo Reyna
+Reyna Poyo Nico
+Reyna Nico Poyo Dolly
 
 Poyo Moon Abso
-null2 Mikan Nyan
+Riri Mikan Nyan
 Sumi Dolly
 Nico Soul Nyan
 Mitsu Sumi Nico
-null2 Mikan Sumi Latte
+Riri Mikan Sumi Latte
 
 Sakurin Poyo
 Nico
-Sumi Soul
+Sumi Soul Riri
 Sumi Nyan Dolly
-
-null2 Poyo Mitsu
+Riri
+Riri Poyo Mitsu
 
 Poyo Abso
 null2 Sumi Sakurin
-Sumi Soul
-null2 Dolly
+Sumi Soul Riri
+Riri Dolly
 null2 Soul Poyo Latte
 null2 Sakurin
 Poyo
