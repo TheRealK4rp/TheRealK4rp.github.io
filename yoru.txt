@@ -4,7 +4,7 @@ Sakurin Sumi Aoi Nyan
 Sumi Nico Soul
 Riri Rose Soul
 
-Poyo Moon
+Poyo Moon Lulu
 Nico Mikan Aoi
 Riri
 Poyo Sakurin Ai
@@ -22,8 +22,8 @@ null2 Moon Soul Aoi
 Sumi Sakurin
 null2 Riri Rose
 Poyo Mikan
-Sumi Latte
-null2 Latte Rose Aoi
+Sumi Latte Jia
+Jia Latte Rose Aoi
 
 Nico Aoi
 Sumi
