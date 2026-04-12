@@ -2,16 +2,16 @@ Nico Jia Mikan
 Riri Rose Lulu
 Sakurin Sumi Aoi Nyan
 Sumi Nico Soul
-Riri Rose Soul
+Riri Rose Soul Dolly
 
 Poyo Moon Lulu
 Nico Mikan Aoi
-Riri
+Riri Aki Dolly
 Poyo Sakurin Ai
-null2 Latte Soul
+Sumi Abso Latte Soul
 Poyo Rose Moon Aoi
 
-null2 Soul
+null2 Soul Abso
 Riri Sae Poyo Moon
 Rose Mikan
 null2 Riri Sae Sakurin
@@ -19,15 +19,15 @@ Mitsu
 Sakurin Nico
 
 null2 Moon Soul Aoi
-Sumi Sakurin
-null2 Riri Rose
+Sumi Sakurin Abso
+null2 Riri Rose Abso
 Poyo Mikan
 Sumi Latte Jia
 Jia Latte Rose Aoi
 
-Nico Aoi
+Nico Aoi Dolly
 Sumi
-Riri
+Riri Dolly
 
 
 
